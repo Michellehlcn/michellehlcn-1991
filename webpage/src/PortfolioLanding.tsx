@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+// import { useState, useEffect } from 'react';
+// import { motion } from 'framer-motion';
 
 
 const projects = [
@@ -46,12 +46,12 @@ const expertise = [
 
 
 export default function PortfolioLanding() {
-    const [scrolled, setScrolled] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    // const [scrolled, setScrolled] = useState(false);
+    // useEffect(() => {
+    //     const handleScroll = () => setScrolled(window.scrollY > 50);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
 
     return (
         <div className='min-h-screen font-sans bg-gray-50 text-gray-800'>

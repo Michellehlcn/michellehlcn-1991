@@ -1,6 +1,6 @@
 import React from 'react';
-import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft , ExternalLink } from 'lucide-react';
+import {  useParams } from "react-router-dom";
+//import { ArrowLeft , ExternalLink } from 'lucide-react';
 
 interface Project {
     id: string;
@@ -32,14 +32,17 @@ const projects: Project[] = [
   },
 ];
 
+
 const ProjectDetail: React.FC =() =>{
     const { id } = useParams<{ id: string }>();
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
     const project = projects.find((p) => p.id === id);
 
     if (!project) {
         return (
-            
+            <></>
         )
     }
 }
+
+export default ProjectDetail;
