@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -322,7 +322,7 @@ export default function PortfolioLanding() {
                     <h2 className='text-4xl font-bold mb-8 text-center'>Expertise</h2>
                     <div className='grid sm:grid-cols-2 gap-6'>
                         {expertise.map((e) => (
-                            <div key={e.title} className='p-6 border rounded-xl hover:shadow-md transition-shadow'>
+                            <div key={e.title} className='p-6 border  border-gray-200 rounded-xl hover:shadow-md transition-shadow'>
                                 <h4 className='font-semibold text-xl mb-2'>{e.title}</h4>
                                 <p className='text-gray-600. text-sm'>{e.description}</p>
                             </div>
@@ -341,7 +341,6 @@ export default function PortfolioLanding() {
                         exit={{ x: -100, opacity:0 }}
                         transition={{ duration: 0.8 }}
                         className='grid md:grid-cols-3 gap-6 mt-4' >
-
                        
                         {groupedTestimonials[index].map((t, i) => (
                             <div key={i} className="p-4 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
