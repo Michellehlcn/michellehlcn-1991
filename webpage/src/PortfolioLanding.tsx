@@ -1,6 +1,6 @@
-// import { useState, useEffect } from 'react';
-// import { motion } from 'framer-motion';
-
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [
     {
@@ -25,7 +25,7 @@ const projects = [
         image: '/email.jpg',
         short: 'Payment invoice reminder',
         description: 'The tool helps user to send reminders to clients to pay invoices before the due date',
-        tags: ['Golang' , 'Smtp']
+        tags: ['Golang', 'Smtp']
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const posts = [
         id: "post-1",
         title: "Rest vs. Soap vs. GraphQL API",
         excerpt:
-        "This post is more about all the architectures based on my own experience. TLDR: The winner at this stage is GraphQL ,well but there is much more to dive into the topic if you read through the post.",
+            "This post is more about all the architectures based on my own experience. TLDR: The winner at this stage is GraphQL ,well but there is much more to dive into the topic if you read through the post.",
         date: "May 11, 2024"
     },
     {
@@ -67,15 +67,63 @@ const expertise = [
     { title: 'Frontend & UX', description: 'Clean, responsive interfaces and user-centric design.' },
 ];
 
-
+const testimonials = [
+    {
+        name: "Jeffrey E.",
+        title: "CTO",
+        feedback:
+            "Michelle was given a very difficult and complex task, and absorbed it all within a day. She even continued to work on completing the task after the allocated time to ensure customer satisfaction."
+    },
+    {
+        name: "Garren C.",
+        title: "Managing Director, Cadence Advisory",
+        feedback:
+            " Michelle was very helpful. Worked through our IT issues. Was very responsive. Solved the problems. Was very balanced and fair about additional charges"
+    },
+     {
+        name: "Jess J.",
+        title: "Former Marketing Manager",
+        feedback:
+            "Michelle is extremely knowledgable and patient. She works methodically and is very thorough. I highly recommend her!"
+    },
+     {
+        name: "Andrew B.",
+        title: "Chiropractor",
+        feedback:
+            "Michelle was excellent today with my task. Her attention to detail and high level of execution was highly appreciated."
+    },
+    {
+        name: "Jordan M.",
+        title: "GIS Student",
+        feedback:
+            "Michelle solved the unusual issue I had and explained how/why it could be achieved",
+    },
+    {
+        name: "Gerson R.",
+        title: "Web Designer",
+        feedback:
+            "Michelle is absolutely incredible to work with and went far beyond the call of duty to ensure I ended up with a result that was perfect. Thank you! I highly recommend her and am super happy with the work."
+    },
+     {
+        name: "Anstel Brands P.",
+        title: "Manager",
+        feedback:
+            "Michelle inderstood this (quite technical) job very easily and knew exactly what i awnted. Was very patient as we worked tgrough a few tech glitches and issues and persisted with completing the job. Thanks!"
+     },
+];
 export default function PortfolioLanding() {
-    // const [scrolled, setScrolled] = useState(false);
-    // useEffect(() => {
-    //     const handleScroll = () => setScrolled(window.scrollY > 50);
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
+    const [index, setIndex] = useState(0);
+    const next = () => setIndex((prev) => (prev +1) % Math.ceil(testimonials.length/3));
+    const prev = () => setIndex((prev) => (prev -1 + Math.ceil(testimonials.length/3)) % Math.ceil(testimonials.length /3));
 
+    useEffect(() => {
+        const interval = setInterval(next, 5000);
+        return () => clearInterval(interval);
+    }, []);
+    const groupedTestimonials = [];
+    for (let i=0; i<testimonials.length; i+=3) {
+        groupedTestimonials.push(testimonials.slice(i, i+3));
+    }
     return (
         <div className='min-h-screen font-sans bg-gray-50 text-gray-800'>
             {/* Top navigation */}
@@ -242,7 +290,7 @@ export default function PortfolioLanding() {
 
 
                     {/* Contact CTA */}
-                    <article id="contact" className="bg-indigo-600 text-white rounded-lg shadow p-6">
+                    {/* <article id="contact" className="bg-indigo-600 text-white rounded-lg shadow p-6">
                         <div className="md:flex md:items-center md:justify-between">
                             <div>
                                 <h3 className="text-xl font-semibold">Let's work together</h3>
@@ -252,7 +300,7 @@ export default function PortfolioLanding() {
                                 <a href='mailto:michellehlcn.au@gmail.com' className="inline-block px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
                             </div>
                         </div>
-                    </article>
+                    </article> */}
 
                 </section>
 
@@ -282,20 +330,49 @@ export default function PortfolioLanding() {
                     </div>
                 </section>
 
+                {/* Testimonials */}
+                <section id="testimonials" className="bg-white rounded-lg shadow p-6">
+                    <h2 className="text-2xl font-semibold">Client Testimonials</h2>
+                    <div className="relative overflow-hidden">
+                        <motion.div
+                        key={index}
+                        initial= {{ x:100, opacity: 0}}
+                        animate={{ x:0, opacity: 1 }}
+                        exit={{ x: -100, opacity:0 }}
+                        transition={{ duration: 0.8 }}
+                        className='grid md:grid-cols-3 gap-6 mt-4' >
+
+                       
+                        {groupedTestimonials[index].map((t, i) => (
+                            <div key={i} className="p-4 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
+                                <p className="text-gray-700 italic">"{t.feedback}"</p>
+                                <div className="mt-4 font-semibold text-indigo-600">{t.name}</div>
+                                <div className="text-sm text-gray-500">{t.title}</div>
+                            </div>
+                        ))}
+                         </motion.div>
+
+                         {/*  Arrows */}
+                        <button
+                        onClick={prev}
+                        className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
+                            <ChevronLeft className='w-5 h-5 text-indigo-600' />
+                        </button>
+                        <button
+                        onClick={next}
+                        className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
+                        >
+                            <ChevronRight className='w-5 h-5 text-indigo-600'/>
+                        </button>
+                    </div>
+
+                </section>
+
                 {/* Contact Section */}
-                <section id="contact" className='bg-white rounded-3xl p-8 shadow-lg'>
-                    <h2 className='text-4xl font-bold mb-4 text-center'>Contact</h2>
-                    <p className='text-gray-600 text-center mb-6'>Interested in collaborating? Reach out and I'll respond promptly.</p>
-                    <form className='grid gap-4 md:grid-cols-2'>
-                        <input className='p-3 border rounded-md' placeholder='Your Name'></input>
-                        <input className='p-3 border rounded-md' placeholder='Your Email'></input>
-                        <input className='p-3 border rounded-md md:col-span-2'></input>
-                        <textarea className='p-3 border rounded-md md:col-span-2 h-32' placeholder='Message'></textarea>
-                        <div className='md:col-span-2 flex items-center justify-between'>
-                            <small className='text-gray-500'>Or email: michellehlcn.au@gmail.com</small>
-                            <button type="submit" className='px-6 py-3 rounded bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700 transition'>Send Message</button>
-                        </div>
-                    </form>
+                <section id="contact" className="bg-indigo-600 text-white rounded-lg shadow p-6 text-center">
+                    <h3 className="text-xl font-semibold">Let's work together</h3>
+                    <p className="mt-2 text-sm opacity-90">Available for freelance and contract work. Reach out to discuss your project.</p>
+                    <a href='mailto:michellehlcn.au@gmail.com' className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
                 </section>
             </main>
 
