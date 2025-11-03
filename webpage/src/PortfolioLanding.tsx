@@ -6,7 +6,7 @@ const projects = [
     {
         id: 1,
         title: 'Payment gateway',
-        image: 'https://images',
+        image: '/humm-wf.png',
         short: 'Humm buy now pay later <> Webflow',
         description: 'Integration between non supportive native platform Webflow and Humm Payment',
         tags: ['Javascript', 'Java', 'GraphAPI']
@@ -14,7 +14,7 @@ const projects = [
     {
         id: 2,
         title: 'Strava - Parkrun Activity Information',
-        image: 'https://images',
+        image: '/strava-pr.png',
         short: 'OAuth & automation for Strava activity posting via Parkrun weekly',
         description: 'Automates activity posting with AI descriptions',
         tags: ['API', 'OAuth', 'Automation']
@@ -22,26 +22,49 @@ const projects = [
     {
         id: 3,
         title: 'Invoice reminder',
-        image: '',
+        image: '/email.jpg',
         short: 'Payment invoice reminder',
         description: 'The tool helps user to send reminders to clients to pay invoices before the due date',
-        tags: ['Go , Smtp']
+        tags: ['Golang' , 'Smtp']
     },
-     {
+    {
         id: 4,
         title: 'Pipedrive Connect',
-        image: 'https://images',
+        image: '/pipedrive.svg',
         short: 'CRM pipedrive <> Opensolar',
         description: 'Pipelines between CRM pipedrive, Onedrive, Opensolar to create auto transactions, purchase, deals.',
         tags: ['Python', 'MongoDB', 'GraphAPI']
     },
 ]
+const posts = [
+    {
+        id: "post-1",
+        title: "Rest vs. Soap vs. GraphQL API",
+        excerpt:
+        "This post is more about all the architectures based on my own experience. TLDR: The winner at this stage is GraphQL ,well but there is much more to dive into the topic if you read through the post.",
+        date: "May 11, 2024"
+    },
+    {
+        id: "post-2",
+        title: "Facebook Messenger Bot",
+        excerpt:
+            "In this post, I will cover the basic messenger automation, GraphQL and how to deploy to one of free tier hosts such as Glitch, Vercel or AWS (Noted Heroku at this stage free dyno had been scraped).",
+        date: "Dec 24, 2022"
+    },
+    {
+        id: "post-3",
+        title: "GoogleSheets Regex Formulas and examples",
+        excerpt:
+            "The Sheets have been getting tremendous attentions from professional and amateur users (if needless to mention Microsoft365 who joined later in the game).",
+        date: "March 06, 2021"
+    }
+];
 
 const expertise = [
-{ title: 'Cloud & Infrastructure', description: 'Scalable, resilient cloud infrastructure with automation.' },
-{ title: 'APIs & Integration', description: 'OAuth flows, token management, and API orchestration.' },
-{ title: 'Data & Automation', description: 'Data pipelines, scraping responsibly, and actionable insights.' },
-{ title: 'Frontend & UX', description: 'Clean, responsive interfaces and user-centric design.' },
+    { title: 'Cloud & Infrastructure', description: 'Scalable, resilient cloud infrastructure with automation CI/CD.' },
+    { title: 'APIs & Integration', description: 'OAuth flows, token management, and API orchestration.' },
+    { title: 'Data & Automation', description: 'Data pipelines, scraping responsibly, and actionable insights.' },
+    { title: 'Frontend & UX', description: 'Clean, responsive interfaces and user-centric design.' },
 ];
 
 
@@ -97,7 +120,7 @@ export default function PortfolioLanding() {
                             </li>
                             <li>
                                 <div className='text-xs text-gray-500'>Experience</div>
-                                <div className='font-medium'>Cloud & Data Engineering - 5+ years</div>
+                                <div className='font-medium'>Cloud & Data Engineering 5+ years</div>
                             </li>
                         </ul>
                     </div>
@@ -111,7 +134,7 @@ export default function PortfolioLanding() {
                                 ))}
                             </div>
                         </div>
-                        
+
                         <div className='w-full md:w-64 bg-white rounded-lg shadow-sm p-4'>
                             <div className='text-xs text-gray-500'>Contact</div>
                             <div className='mt-2 text-sm dont-medium'>michellehlcn.au@gmail.com</div>
@@ -174,7 +197,7 @@ export default function PortfolioLanding() {
                                             <p className='mt-2 text-sm text-gray-600'>{p.short}</p>
                                             <p className='mt-3 text-sm text-gray-700'>{p.description}</p>
                                             <p className='mt-4 flex flex-wrap gap-2'>
-                                                {p.tags?.map((t)=> (
+                                                {p.tags?.map((t) => (
                                                     <span key={t} className='text-xs px-2 py-1 rounded bg-gray-100 text-gray-700'>{t}</span>
                                                 ))}
                                             </p>
@@ -185,11 +208,57 @@ export default function PortfolioLanding() {
                         </div>
                     </article>
 
+                    {/* Blog */}
+                    <article id="blog" className="bg-white rounded-lg shadow p-6">
+                        <div className="flex items-center justify-between ">
+                            <h2 className="text-2xl font-semibold">From the Blog</h2>
+                            <a href="#" className="text-sm text-indigo-600">View all posts</a>
+                        </div>
+
+                        <div className="mt-6 grid md:grid-cols-2 gap-6">
+                            {posts.map((post) => (
+                                <div key={post.id} className="p-4 border rounded-md hover:shadow-sm transition">
+                                    <div className="text-sm text-gray-500">{post.date}</div>
+                                    <h3 className="font-semibold mt-2">{post.title}</h3>
+                                    <p className="mt-2 text-sm text-gray-600">{post.excerpt}</p>
+                                    <a href="#" className="mt-3 inline-block text-indigo-600 text-sm">Read →</a>
+                                </div>
+                            ))}
+                        </div>
+                    </article>
+
+                    {/* Expertise
+                    <article id="expertise" className="bg-white rounded-lg shadow p-6">
+                        <h2 className="tetx-2xl font-semibold">Expertise</h2>
+                        <div className="mt-4 grid md:grid-cols-2 gap-4">
+                            {expertise.map((e) => (
+                                <div key={e.title} className="p-4 border rounded-md">
+                                    <h4 className="font-semibold">{e.title}</h4>
+                                    <p className="mt-2 text-sm text-gray-600">{e.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </article> */}
+
+
+                    {/* Contact CTA */}
+                    <article id="contact" className="bg-indigo-600 text-white rounded-lg shadow p-6">
+                        <div className="md:flex md:items-center md:justify-between">
+                            <div>
+                                <h3 className="text-xl font-semibold">Let's work together</h3>
+                                <p className="mt-1 text-sm opacity-90">Available for freelance and contract work. Reach out to discuss your project.</p>
+                            </div>
+                            <div className="mt-4 md:mt-0">
+                                <a href='mailto:michellehlcn.au@gmail.com' className="inline-block px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
+                            </div>
+                        </div>
+                    </article>
+
                 </section>
 
 
             </div>
-            
+
 
             <header className='relative bg-indigo-800 text-white p-12 md:p-24 text-center'>
                 <h1 className='text-5xl md:text-6xl font-bold leading-tight'>Michelle Nguyen</h1>
@@ -198,8 +267,8 @@ export default function PortfolioLanding() {
             </header>
 
             <main className='max-w-6xl mx-auto p-6 md:p-12 grid gap-16'>
-          
-                
+
+
                 {/* Expertise Section */}
                 <section id="expertise" className='bg-white rounded-3xl p-8 shadow-lg'>
                     <h2 className='text-4xl font-bold mb-8 text-center'>Expertise</h2>
@@ -212,21 +281,21 @@ export default function PortfolioLanding() {
                         ))}
                     </div>
                 </section>
-                
+
                 {/* Contact Section */}
                 <section id="contact" className='bg-white rounded-3xl p-8 shadow-lg'>
-                        <h2 className='text-4xl font-bold mb-4 text-center'>Contact</h2>
-                        <p className='text-gray-600 text-center mb-6'>Interested in collaborating? Reach out and I'll respond promptly.</p>
-                        <form className='grid gap-4 md:grid-cols-2'>
-                            <input className='p-3 border rounded-md' placeholder='Your Name'></input>
-                            <input className='p-3 border rounded-md' placeholder='Your Email'></input>
-                            <input className='p-3 border rounded-md md:col-span-2'></input>
-                            <textarea className='p-3 border rounded-md md:col-span-2 h-32' placeholder='Message'></textarea>
-                            <div className='md:col-span-2 flex items-center justify-between'>
-                                <small className='text-gray-500'>Or email: michellehlcn.au@gmail.com</small>
-                                <button type="submit" className='px-6 py-3 rounded bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700 transition'>Send Message</button>
-                            </div>
-                        </form>
+                    <h2 className='text-4xl font-bold mb-4 text-center'>Contact</h2>
+                    <p className='text-gray-600 text-center mb-6'>Interested in collaborating? Reach out and I'll respond promptly.</p>
+                    <form className='grid gap-4 md:grid-cols-2'>
+                        <input className='p-3 border rounded-md' placeholder='Your Name'></input>
+                        <input className='p-3 border rounded-md' placeholder='Your Email'></input>
+                        <input className='p-3 border rounded-md md:col-span-2'></input>
+                        <textarea className='p-3 border rounded-md md:col-span-2 h-32' placeholder='Message'></textarea>
+                        <div className='md:col-span-2 flex items-center justify-between'>
+                            <small className='text-gray-500'>Or email: michellehlcn.au@gmail.com</small>
+                            <button type="submit" className='px-6 py-3 rounded bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700 transition'>Send Message</button>
+                        </div>
+                    </form>
                 </section>
             </main>
 
