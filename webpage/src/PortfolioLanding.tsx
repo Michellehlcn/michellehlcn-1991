@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -80,13 +81,13 @@ const testimonials = [
         feedback:
             " Michelle was very helpful. Worked through our IT issues. Was very responsive. Solved the problems. Was very balanced and fair about additional charges"
     },
-     {
+    {
         name: "Jess J.",
         title: "Former Marketing Manager",
         feedback:
             "Michelle is extremely knowledgable and patient. She works methodically and is very thorough. I highly recommend her!"
     },
-     {
+    {
         name: "Andrew B.",
         title: "Chiropractor",
         feedback:
@@ -104,25 +105,25 @@ const testimonials = [
         feedback:
             "Michelle is absolutely incredible to work with and went far beyond the call of duty to ensure I ended up with a result that was perfect. Thank you! I highly recommend her and am super happy with the work."
     },
-     {
+    {
         name: "Anstel Brands P.",
         title: "Manager",
         feedback:
             "Michelle inderstood this (quite technical) job very easily and knew exactly what i awnted. Was very patient as we worked tgrough a few tech glitches and issues and persisted with completing the job. Thanks!"
-     },
+    },
 ];
 export default function PortfolioLanding() {
     const [index, setIndex] = useState(0);
-    const next = () => setIndex((prev) => (prev +1) % Math.ceil(testimonials.length/3));
-    const prev = () => setIndex((prev) => (prev -1 + Math.ceil(testimonials.length/3)) % Math.ceil(testimonials.length /3));
+    const next = () => setIndex((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
+    const prev = () => setIndex((prev) => (prev - 1 + Math.ceil(testimonials.length / 3)) % Math.ceil(testimonials.length / 3));
 
     useEffect(() => {
         const interval = setInterval(next, 5000);
         return () => clearInterval(interval);
     }, []);
     const groupedTestimonials = [];
-    for (let i=0; i<testimonials.length; i+=3) {
-        groupedTestimonials.push(testimonials.slice(i, i+3));
+    for (let i = 0; i < testimonials.length; i += 3) {
+        groupedTestimonials.push(testimonials.slice(i, i + 3));
     }
     return (
         <div className='min-h-screen font-sans bg-gray-50 text-gray-800'>
@@ -133,7 +134,7 @@ export default function PortfolioLanding() {
                         <div className='w-12 h-12 rounded-md bg-gradient-to-br from-indigo-600 to-sky-500 flex items-center justify-center text-white font-bold'>MN</div>
                         <div>
                             <div className='text-lg font-semibold'>Michelle Nguyen</div>
-                            <div className='text-sm text-gray-500'>Cloud Architect & Software Engineer</div>
+                            <div className='text-sm text-gray-500'>Cloud Architect & Developer</div>
                         </div>
                     </div>
 
@@ -177,7 +178,7 @@ export default function PortfolioLanding() {
                         <div className='w-full md:w-64 bg-white rounded-lg shadow-sm p-4'>
                             <div className='text-xs text-gray-500'>Key Skills</div>
                             <div className='mt-3 flex flex-wrap gap-2'>
-                                {['Python', 'Java', 'Javascript', 'Typescript','Go', 'Postgres', 'AWS', 'GCP', 'Terraform', 'Lambda'].map((s) => (
+                                {['Python', 'Java', 'Javascript', 'Typescript', 'Go', 'Postgres', 'AWS', 'GCP', 'Terraform', 'Lambda'].map((s) => (
                                     <span key={s} className='px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs'>{s}</span>
                                 ))}
                             </div>
@@ -196,8 +197,14 @@ export default function PortfolioLanding() {
             <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-4 gap-8 py-12'>
                 <aside className='md:col-span-1 sticky top-24 self-start'>
                     <div className='bg-white rounded-lg shadow-sm p-6'>
-                        <h3 className='text-lg font-semibold'>Curriculum Vitae</h3>
-                        <p className='mt-2 text-sm text-gray-600'>Summary of roles, select achievements and contact details.</p>
+                        {/* Circular profile image */}
+                        <div className="flex flex-col items-center justify-end">
+                        <img src="/profile.png" alt="MN" className='w-32 h-32 rounded-full border-4 border-white mb-4 object-cover '></img>
+                        <h3 className='text-lg font-semibold'>Michelle Nguyen</h3>
+                        </div>
+
+                        
+                        <p className='mt-2 text-sm text-gray-600'>Cloud Architect & Developer</p>
                         <dl className='mt-4 text-sm text-gray-700 space-y-3'>
                             <div>
                                 <dt className='text-xs tetx-gray-500'>Current</dt>
@@ -309,6 +316,7 @@ export default function PortfolioLanding() {
 
 
             <header className='relative bg-indigo-800 text-white p-12 md:p-24 text-center'>
+
                 <h1 className='text-5xl md:text-6xl font-bold leading-tight'>Michelle Nguyen</h1>
                 <p className='mt-4 text-xl md:text-2xl'>Cloud Architect & Developer creating data-driven tools, automation</p>
                 <a href="#projects" className='mt-8 inline-block px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition'>View Projects</a>
@@ -335,33 +343,33 @@ export default function PortfolioLanding() {
                     <h2 className="text-2xl font-semibold">Client Testimonials</h2>
                     <div className="relative overflow-hidden">
                         <motion.div
-                        key={index}
-                        initial= {{ x:100, opacity: 0}}
-                        animate={{ x:0, opacity: 1 }}
-                        exit={{ x: -100, opacity:0 }}
-                        transition={{ duration: 0.8 }}
-                        className='grid md:grid-cols-3 gap-6 mt-4' >
-                       
-                        {groupedTestimonials[index].map((t, i) => (
-                            <div key={i} className="p-4 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
-                                <p className="text-gray-700 italic">"{t.feedback}"</p>
-                                <div className="mt-4 font-semibold text-indigo-600">{t.name}</div>
-                                <div className="text-sm text-gray-500">{t.title}</div>
-                            </div>
-                        ))}
-                         </motion.div>
+                            key={index}
+                            initial={{ x: 100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: -100, opacity: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className='grid md:grid-cols-3 gap-6 mt-4' >
 
-                         {/*  Arrows */}
+                            {groupedTestimonials[index].map((t, i) => (
+                                <div key={i} className="p-4 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
+                                    <p className="text-gray-700 italic">"{t.feedback}"</p>
+                                    <div className="mt-4 font-semibold text-indigo-600">{t.name}</div>
+                                    <div className="text-sm text-gray-500">{t.title}</div>
+                                </div>
+                            ))}
+                        </motion.div>
+
+                        {/*  Arrows */}
                         <button
-                        onClick={prev}
-                        className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
+                            onClick={prev}
+                            className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
                             <ChevronLeft className='w-5 h-5 text-indigo-600' />
                         </button>
                         <button
-                        onClick={next}
-                        className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
+                            onClick={next}
+                            className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
                         >
-                            <ChevronRight className='w-5 h-5 text-indigo-600'/>
+                            <ChevronRight className='w-5 h-5 text-indigo-600' />
                         </button>
                     </div>
 
