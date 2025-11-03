@@ -177,7 +177,7 @@ export default function PortfolioLanding() {
                         <div className='w-full md:w-64 bg-white rounded-lg shadow-sm p-4'>
                             <div className='text-xs text-gray-500'>Key Skills</div>
                             <div className='mt-3 flex flex-wrap gap-2'>
-                                {['Python', 'Java', 'Javascript', 'Typescript', 'Postgres', 'AWS', 'GCP', 'Terraform', 'Lambda'].map((s) => (
+                                {['Python', 'Java', 'Javascript', 'Typescript','Go', 'Postgres', 'AWS', 'GCP', 'Terraform', 'Lambda'].map((s) => (
                                     <span key={s} className='px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs'>{s}</span>
                                 ))}
                             </div>
