@@ -195,7 +195,7 @@ export default function PortfolioLanding() {
 
             {/* Main content area: CV (left) +details (right) */}
             <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-4 gap-8 py-12'>
-                <aside className='md:col-span-1 sticky top-24 self-start'>
+                <aside className='md:col-span-1 lg:sticky top-24 self-start'>
                     <div className='bg-white rounded-lg shadow-sm p-6'>
                         {/* Circular profile image */}
                         <div className="flex flex-col items-center justify-end">
