@@ -126,27 +126,7 @@ export default function PortfolioLanding() {
         groupedTestimonials.push(testimonials.slice(i, i + 3));
     }
     return (
-        <div className='min-h-screen font-sans bg-gray-50 text-gray-800'>
-            {/* Top navigation */}
-            <header className='bg-white shadow-sm sticky top-0 z-40'>
-                <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 py-4 flex items-center justify-between'>
-                    <div className='flex items-center gap-4'>
-                        <div className='w-12 h-12 rounded-md bg-gradient-to-br from-indigo-600 to-sky-500 flex items-center justify-center text-white font-bold'>MN</div>
-                        <div>
-                            <div className='text-lg font-semibold'>Michelle Nguyen</div>
-                            <div className='text-sm text-gray-500'>Cloud Architect & Developer</div>
-                        </div>
-                    </div>
-
-                    <nav className='hidden md:flex gap-8 text-sm text-gray-700'>
-                        <a href="#blog" className='hover:text-indigo-600'>Blog</a>
-                        <a href="#projects" className='hover:text-indigo-600'>Projects</a>
-                        <a href="expertise" className='hover:text-indigo-600'>Expertise</a>
-                        <a href="#cv" className='hover:text-indigo-600'>CV</a>
-                        <a href="#contact" className='hover:text-indigo-600'>Contact</a>
-                    </nav>
-                </div>
-            </header>
+       <div>
             {/* Hero */}
             <section className='bg-gradient-to-r from-white to-gray-50 py-12'>
                 <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-8 items-center'>
@@ -315,12 +295,12 @@ export default function PortfolioLanding() {
             </div>
 
 
-            <header className='relative bg-indigo-800 text-white p-12 md:p-24 text-center'>
+            <section className='relative bg-indigo-800 text-white p-12 md:p-24 text-center'>
 
                 <h1 className='text-5xl md:text-6xl font-bold leading-tight'>Michelle Nguyen</h1>
                 <p className='mt-4 text-xl md:text-2xl'>Cloud Architect & Developer creating data-driven tools, automation</p>
                 <a href="#projects" className='mt-8 inline-block px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition'>View Projects</a>
-            </header>
+            </section>
 
             <main className='max-w-6xl mx-auto p-6 md:p-12 grid gap-16'>
 
@@ -382,10 +362,6 @@ export default function PortfolioLanding() {
                     <a href='mailto:michellehlcn.au@gmail.com' className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
                 </section>
             </main>
-
-            <footer className='text-center text-sm text-gray-500 py-6'>
-                @ {new Date().getFullYear()} Michelle Nguyen
-            </footer>
         </div>
     )
 }
