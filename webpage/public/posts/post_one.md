@@ -2,16 +2,32 @@
 layout: post
 title: REST vs SOAP vs GRAPHQL API
 categories: [Blog]
-tags: [python, xml, graphQL, RestfulAPI, SOAP, shopifyAPI]
+tags: [Python, XML, GraphQL, RESTful API, SOAP, Shopify API]
 ---
 
-This post is more about all the architectures based on my own experience. TLDR: The winner at this stage is GraphQL ,well but there is much more to dive into the topic if you read through the post.
+# REST vs SOAP vs GraphQL API
+
+> _By Michelle Nguyen, 2024_  
+
+
+## TL;DR
+
+From my experience, the winner at this stage is GraphQL — but there’s much more to explore if you read through this post.
+
 
 ## Background
+In modern software development, two key concepts dominate: the client-server model and APIs.  
 
-In modern software development, there are two very important concepts: the client-server model and APIs. Client-server is a structure where by the server( or a provider) and client( or a requester) communicates and sends information or perform actions according to what client does. API or Application Programming Interface is a set of defined rules that show instruction how applications can communicate to each others. 
+- The client-server model defines how a client (requester) and a server (provider) communicate to exchange data.  
+- An API (Application Programming Interface) defines structured rules that specify how software systems interact.  
 
-Taking in the timeline order, SOAP had been released in 1999, following by REST in 2000, and GraphQL in 2015. Today, the most popular ways to implement APIs are REST and GraphQL, it can be seen a large migration from REST to GraphQL architecture.
+Historically:
+- SOAP was released in 1999
+- REST followed in 2000
+- GraphQL arrived in 2015
+
+Today, REST and GraphQL are the most widely used — and we can see many systems migrating from REST to GraphQL.
+
 
 ## SOAP (Simple Object Access Protocol)
 

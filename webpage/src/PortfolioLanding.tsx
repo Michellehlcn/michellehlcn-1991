@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 //import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const projects = [
     {
@@ -39,21 +40,21 @@ const projects = [
 ]
 const posts = [
     {
-        id: "post-1",
+        id: "post_one",
         title: "Rest vs. Soap vs. GraphQL API",
         excerpt:
             "This post is more about all the architectures based on my own experience. TLDR: The winner at this stage is GraphQL ,well but there is much more to dive into the topic if you read through the post.",
         date: "May 11, 2024"
     },
     {
-        id: "post-2",
+        id: "post_two",
         title: "Facebook Messenger Bot",
         excerpt:
             "In this post, I will cover the basic messenger automation, GraphQL and how to deploy to one of free tier hosts such as Glitch, Vercel or AWS (Noted Heroku at this stage free dyno had been scraped).",
         date: "Dec 24, 2022"
     },
     {
-        id: "post-3",
+        id: "post_three",
         title: "GoogleSheets Regex Formulas and examples",
         excerpt:
             "The Sheets have been getting tremendous attentions from professional and amateur users (if needless to mention Microsoft365 who joined later in the game).",
@@ -252,12 +253,15 @@ export default function PortfolioLanding() {
 
                         <div className="mt-6 grid md:grid-cols-2 gap-6">
                             {posts.map((post) => (
-                                <div key={post.id} className="p-4 border rounded-md hover:shadow-sm transition">
+                                <Link
+                                to={`/blog/${post.id}`}
+                                key={post.id} 
+                                className="p-4 border rounded-md hover:shadow-sm transition">
                                     <div className="text-sm text-gray-500">{post.date}</div>
                                     <h3 className="font-semibold mt-6 text-2xl">{post.title}</h3>
                                     <p className="mt-6 text-m text-gray-600">{post.excerpt}</p>
                                     <a href="#" className="mt-3 inline-block text-indigo-600 text-sm">Read →</a>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </article>

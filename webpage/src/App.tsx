@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import PortfolioLanding from './PortfolioLanding'
 import { _Header } from './components/_Header'
+import BlogDetail from './pages/BlogDetail'
 
 function App() {
   return (
@@ -12,8 +13,7 @@ function App() {
           <_Header />
           <Routes>
             <Route path="/" element={<PortfolioLanding />} />
-            {/* <Route path="/blog" element={<BlogList />} /> */}
-            {/* <Route path="/blog/:slug" element={<BlogDetail />} /> */}
+            <Route path="/blog/:slug" element={<BlogDetail />} />
           </Routes>
           {/* Footer */}
           <footer className='text-center text-sm text-gray-500 py-6'>

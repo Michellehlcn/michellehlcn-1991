@@ -1,57 +1,94 @@
-// import ReactMarkdown from "react-markdown";
-// import { replace, useParams } from "react-router-dom";
-// import remarkGfm from "remark-gfm";
-// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-// import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import { Link, useParams } from "react-router-dom";
+import remarkGfm from "remark-gfm";
 
-// interface MarkdownRendererProps {
-//   content: string;
-// }
 
-// export default function BlogDetail () {
-//     const { slug } = useParams<{ slug: string }>();
-//     const [content, setContent] = useState<string>('');
-//     useEffect(() => {
-//         import(`../posts/${slug}.md`)
-//             .then((res) => fetch(res.default))
-//             .then((r) => r.text())
-//             .then((text) => setContent(text))
-//             .catch(() => setContent('#.Post not found'));
-//     }, [slug]);
+import { useEffect, useState } from "react";
+import matter from "gray-matter";
+import { CodeBlock, dracula } from "react-code-blocks";
 
-//     return (
-//         <main className="max-w-3xl mx-auto px-6 md:px-8 lg:px-12 py-12">
-//             {
-//                 content? (
-//                     <ReactMarkdown>
-//                         children={content}
-//                         remarkPlugins={[remarkGfm]}
-//                         components={{
-//                             code ({ node, inline, className, children, ...props }){
-//                             const match = /language-(\w+)/.exec(className || '');
-//                             return !inline && match ? (
-//                                 <SyntaxHighlighter 
-//                                 style={materialDark}
-//                                 language={match[1]}
-//                                 PreTag="div"
-//                                 {...props}
-//                                 >
-//                                 {String(children),replace(/\n$/,'')}
-//                                 </SyntaxHighlighter>
-//                             ): (
-//                                  <code
-//               className="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono"
-//               {...props}
-//             >{children}</code>
-//                             );
-//                         },
-//                         }}
-//                     </ReactMarkdown>
-//                 ) : (
-//                     <p>Loading ...</p>
-//                 )
-//             }
-//         </main>
-//     )
-// }
+interface FrontMatter {
+    title?: string;
+    layout?: string;
+    categories?: string[];
+    tags?: string[];
+}
+
+export default function BlogDetail() {
+    const { slug } = useParams<{ slug: string }>();
+    const [content, setContent] = useState<string>('');
+    const [meta, setMeta] = useState<FrontMatter>({});
+
+    useEffect(() => {
+        fetch(`/posts/${slug}.md`)
+            .then((res) => {
+                console.log(res); if (!res.ok) throw new Error("Post not found");
+                return res.text();
+            })
+            .then((text) => {
+                const { data, content } = matter(text);
+                setMeta(data);
+                setContent(content);
+            })
+            .catch((e) => setContent('#.Post not found' + e));
+    }, [slug]);
+
+    return (
+        <main className="max-w-5xl mx-auto px-6 md:px-8 lg:px-12 py-12">
+            <div className="max-w-5xl mx-auto px-6">
+
+                <Link
+                    to="/"
+                    className="text-indigo-600 text-sm hover:underline inline-block mb-6"
+                > ← Back to Homepage
+                </Link>
+                {meta.title && (
+                    <h1 className="text-3xl font-bold mb-4 text-blue-600">{meta.title}</h1>
+                )}
+                {meta.tags && (
+                    <div className="mb-6 flex flex-wrap gap-2">
+                        {meta.tags.map((tag) => (
+                            <span
+                                key={tag}
+                                className="bg-blue-100 text-blue-600 text-sm px-2 py-1 rounded"
+                            >
+                                #{tag}
+                            </span>
+                        ))}
+                    </div>
+                )}
+                <section className="bg-white p-6 rounded-xl shadow text-sm" >
+                    <ReactMarkdown
+                        children={content}
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                            code({ inlist, className, children, ...props }) {
+                                const match = /language-(\w+)/.exec(className || '');
+                                return !inlist && match ? (
+                                    <CodeBlock
+                                        text={String(children).replace(/\n$/, '')}
+                                        language={match[1]}
+                                        showLineNumbers={true}
+                                        theme={dracula}
+                                  
+                                        />
+                                    // <SyntaxHighlighter
+                                    
+                                    //     language={match[1]}
+                                    //     PreTag="div"
+                                    //     {...props}
+                                    // >
+                                    //     {String(children).replace(/\n$/, '')}
+                                    // </SyntaxHighlighter>
+                                ) : (
+                                    <code className={className} {...props}>{children}</code>
+                                );
+                            },
+                        }}
+                    />
+                </section>
+            </div>
+
+        </main>
+    );
+}
