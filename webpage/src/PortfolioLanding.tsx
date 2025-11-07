@@ -245,11 +245,11 @@ export default function PortfolioLanding() {
                         <div className='mt-6 grid md:grid-cols-2 gap-6'>
                             {projects.map((p) => (
                                 <div key={p.id} className='rounded-md overflow-hidden border border-gray-100'>
-                                    <div className='md:flex'>
-                                        <img src={p.image} alt={p.title} className='h-40 w-full md:w-40 object-cover'></img>
-                                        <div className='p-4 flex-1'>
-                                            <h3 className='font-semibold text-lg'>{p.title}</h3>
-                                            <p className='mt-2 text-sm text-gray-600'>{p.short}</p>
+                                    <div className='md:flex flex-col p-6'>
+                                        <img src={p.image} alt={p.title} className='h-40 w-full object-cover'></img>
+                                        <div className='flex-1 mt-6'>
+                                            <h3 className='font-semibold text-2xl'>{p.title}</h3>
+                                            <p className='mt-2 text-m text-gray-600'>{p.short}</p>
                                             <p className='mt-3 text-sm text-gray-700'>{p.description}</p>
                                             <p className='mt-4 flex flex-wrap gap-2'>
                                                 {p.tags?.map((t) => (
@@ -274,8 +274,8 @@ export default function PortfolioLanding() {
                             {posts.map((post) => (
                                 <div key={post.id} className="p-4 border rounded-md hover:shadow-sm transition">
                                     <div className="text-sm text-gray-500">{post.date}</div>
-                                    <h3 className="font-semibold mt-2">{post.title}</h3>
-                                    <p className="mt-2 text-sm text-gray-600">{post.excerpt}</p>
+                                    <h3 className="font-semibold mt-6 text-2xl">{post.title}</h3>
+                                    <p className="mt-6 text-m text-gray-600">{post.excerpt}</p>
                                     <a href="#" className="mt-3 inline-block text-indigo-600 text-sm">Read →</a>
                                 </div>
                             ))}
@@ -348,12 +348,12 @@ export default function PortfolioLanding() {
                             animate={{ x: 0, opacity: 1 }}
                             exit={{ x: -100, opacity: 0 }}
                             transition={{ duration: 0.8 }}
-                            className='grid md:grid-cols-3 gap-6 mt-4' >
+                            className='grid md:grid-cols-3 gap-6 mt-6' >
 
                             {groupedTestimonials[index].map((t, i) => (
-                                <div key={i} className="p-4 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
+                                <div key={i} className="p-6 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
                                     <p className="text-gray-700 italic">"{t.feedback}"</p>
-                                    <div className="mt-4 font-semibold text-indigo-600">{t.name}</div>
+                                    <div className="mt-6 font-semibold text-indigo-600">{t.name}</div>
                                     <div className="text-sm text-gray-500">{t.title}</div>
                                 </div>
                             ))}
