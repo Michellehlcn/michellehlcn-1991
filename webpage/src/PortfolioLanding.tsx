@@ -15,7 +15,7 @@ const projects = [
     },
     {
         id: 2,
-        title: 'Strava - Parkrun Activity Information',
+        title: 'STRAVAPR',
         image: '/strava-pr.png',
         short: 'OAuth & automation for Strava activity posting via Parkrun weekly',
         description: 'Automates activity posting with AI descriptions',
@@ -110,7 +110,7 @@ const testimonials = [
         name: "Anstel Brands P.",
         title: "Manager",
         feedback:
-            "Michelle inderstood this (quite technical) job very easily and knew exactly what i awnted. Was very patient as we worked tgrough a few tech glitches and issues and persisted with completing the job. Thanks!"
+            "Michelle understood this (quite technical) job very easily and knew exactly what i awnted. Was very patient as we worked through a few tech glitches and issues and persisted with completing the job. Thanks!"
     },
 ];
 export default function PortfolioLanding() {
