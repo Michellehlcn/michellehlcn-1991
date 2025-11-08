@@ -1,8 +1,105 @@
 @import "tailwindcss";
 
 
-@theme {
-  --color-midnight: #005eff;
+.blogDetail {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #111827;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-weight: 400;
+}
+
+/* Paragraphs */
+.blogDetail p {
+  margin-bottom: 1.25rem;
+}
+
+/* Headings */
+.blogDetail h1,
+.blogDetail h2,
+.blogDetail h3,
+.blogDetail h4,
+.blogDetail h5,
+.blogDetail h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blogDetail h1 { font-size: 2rem; }
+.blogDetail h2 { font-size: 1.75rem; }
+.blogDetail h3 { font-size: 1.5rem; }
+.blogDetail h4 { font-size: 1.25rem; }
+
+/* Lists */
+.blogDetail ul,
+.blogDetail ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.blogDetail li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+.blogDetail blockquote {
+  border-left: 4px solid #6366f1;
+  padding-left: 1rem;
+  color: #4b5563;
+  font-style: italic;
+  background-color: #f9fafb;
+  margin: 1.5rem 0;
+}
+
+/* Links */
+.blogDetail a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.blogDetail a:hover {
+  color: #4338ca;
+}
+
+/* Inline code */
+.blogDetail code {
+  background-color: rgb(237, 237, 235);
+  color: #4b5563;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+  font-family: "Fira Code", monospace;
+}
+
+/* Code blocks */
+.blogDetail pre {
+  background-color: rgb(237, 237, 235);
+ 
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+}
+
+/* Images */
+.blogDetail img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Horizontal rule */
+.blogDetail hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2rem 0;
 }
 /* #root {
   max-width: 1280px;

@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 
 import { useEffect, useState } from "react";
 import matter from "gray-matter";
-import { CodeBlock, dracula } from "react-code-blocks";
+import { CodeBlock, github } from "react-code-blocks";
 
 interface FrontMatter {
     title?: string;
@@ -43,7 +43,7 @@ export default function BlogDetail() {
                 > ← Back to Homepage
                 </Link>
                 {meta.title && (
-                    <h1 className="text-3xl font-bold mb-4 text-blue-600">{meta.title}</h1>
+                    <h1 className="text-5xl font-bold mb-4 ">{meta.title}</h1>
                 )}
                 {meta.tags && (
                     <div className="mb-6 flex flex-wrap gap-2">
@@ -57,7 +57,7 @@ export default function BlogDetail() {
                         ))}
                     </div>
                 )}
-                <section className="bg-white p-6 rounded-xl shadow text-sm" >
+                <section className="bg-white p-6 rounded-xl shadow text-sm blogDetail" >
                     <ReactMarkdown
                         children={content}
                         remarkPlugins={[remarkGfm]}
@@ -69,19 +69,16 @@ export default function BlogDetail() {
                                         text={String(children).replace(/\n$/, '')}
                                         language={match[1]}
                                         showLineNumbers={true}
-                                        theme={dracula}
-                                  
+                                        theme={github}
                                         />
-                                    // <SyntaxHighlighter
-                                    
-                                    //     language={match[1]}
-                                    //     PreTag="div"
-                                    //     {...props}
-                                    // >
-                                    //     {String(children).replace(/\n$/, '')}
-                                    // </SyntaxHighlighter>
+    
                                 ) : (
-                                    <code className={className} {...props}>{children}</code>
+                                    <code 
+                                    className={className} 
+                                    {...props} 
+                                    style={{ whiteSpace: "pre-wrap", backgroundColor: "#f5f5f5", padding: "2px 4px", borderRadius: "4px" }}
+                                    >{children}
+                                    </code>
                                 );
                             },
                         }}
