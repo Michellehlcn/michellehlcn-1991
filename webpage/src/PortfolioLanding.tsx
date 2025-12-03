@@ -15,7 +15,7 @@ const projects = [
     },
     {
         id: 2,
-        title: 'STRAVAPR',
+        title: 'STRIDEPR',
         image: '/strava-pr.png',
         short: 'OAuth & automation for Strava activity posting via Parkrun weekly',
         description: 'Automates activity posting with AI descriptions',
@@ -133,7 +133,8 @@ export default function PortfolioLanding() {
                 <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-8 items-center'>
                     <div className='md:col-span-2'>
                         <h1 className='text-4xl md:text-5xl font-bold leading-tight'>Building reliable data and automation platforms</h1>
-                        <p className='mt-4 text-lg text-gray-600'>I design cloud-native systems, automate API workflows, and craft UX for data-heavy web apps. Current focus: observability, token-safe integrations and AI-assisted summaries.</p>
+                        <p className='mt-4 text-lg text-gray-600'>Passionate IT engineer with a strong interest in coding, DevOps, infrastructure architecture, and Infrastructure as Code. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology. 5+ years experience, previously held the role of Data Engineer, and senior software developer, managing an engineer team.
+</p>
                         <div className='mt-6 flex flex-wrap gap-3'>
                             <a href='#projects' className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow hover:bg-indigo-700 transition'>View Projects</a>
                             <a href="#contact" className='inline-flex items-center px-4 py-2 rounded-md border border-gray-200 text-sm text-gray-700 hover:bg-gray-50'>Get in touch</a>
@@ -180,21 +181,18 @@ export default function PortfolioLanding() {
                     <div className='bg-white rounded-lg shadow-sm p-6'>
                         {/* Circular profile image */}
                         <div className="flex flex-col items-center justify-end">
-                        <img src="/profile.png" alt="MN" className='w-32 h-32 rounded-full border-4 border-white mb-4 object-cover '></img>
-                        <h3 className='text-lg font-semibold'>Michelle Nguyen</h3>
+                            <img src="/profile.png" alt="MN" className='w-32 h-32 rounded-full border-4 border-white mb-4 object-cover '></img>
+                            <h3 className='text-lg font-semibold'>Michelle Nguyen</h3>
+                            <p className='mt-2 text-sm text-gray-600 items-center'>IT Engineer</p>
                         </div>
-
+                       
                         
-                        <p className='mt-2 text-sm text-gray-600'>Cloud Architect & Developer</p>
                         <dl className='mt-4 text-sm text-gray-700 space-y-3'>
                             <div>
                                 <dt className='text-xs tetx-gray-500'>Current</dt>
                                 <dd className='font-medium'>Engineer - Freelance</dd>
                             </div>
-                            <div>
-                                <dt className='text-xs tetx-gray-500'>Previous</dt>
-                                <dd className='font-medium'>Data Engineer - Resilience Building Council</dd>
-                            </div>
+                
                             <div>
                                 <dt className='text-xs tetx-gray-500'>Education</dt>
                                 <dd className='font-medium'>Dip Cloud Architecture</dd>
