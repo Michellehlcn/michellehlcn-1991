@@ -129,13 +129,13 @@ export default function PortfolioLanding() {
     return (
         <div>
             {/* Hero */}
-            <section  className='bg-[url(/sketch.png)] bg-cover bg-center h-screen relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-white to-gray-50 py-12'>
+            <section className='banner bg-[url(/sketch.png)] bg-cover bg-center h-screen relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-white to-gray-50 py-12'>
                 
                 {/* <div className='bg-[url(/sketch.png)] bg-top-right inset-0 bg-cover bg-no-repeat h-full absolute '> */}
                  {/*  <img src="/sketch.png" alt="sketch"  className=' absolute  ' ></img> */}
                 {/* </div> */}
                 
-                <div className=' max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-8 items-center'>
+                <div className='hero-container relative h-full  max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-8 items-center'>
                     <div className='md:col-span-2 p-5 bg-white rounded-lg'>
                         <h1 className='text-4xl md:text-5xl font-bold leading-tight'>Building reliable data and automation platforms</h1>
                         <p className='mt-4 text-lg text-gray-600'>Passionate IT engineer with a strong interest in coding, DevOps, infrastructure architecture, and Infrastructure as Code. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology. 5+ years experience, previously held the role of Data Engineer, and senior software developer, managing an engineer team.
