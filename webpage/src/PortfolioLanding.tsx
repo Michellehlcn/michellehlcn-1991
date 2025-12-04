@@ -129,7 +129,7 @@ export default function PortfolioLanding() {
     return (
         <div>
             {/* Hero */}
-            <section className='banner bg-[url(/sketch.png)] bg-cover bg-center h-screen relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-white to-gray-50 py-12'>
+            <section className='banner bg-[url(/rudolph.jpeg)] bg-cover bg-center  relative w-full overflow-hidden bg-gradient-to-r from-white to-gray-50 py-12'>
                 
                 {/* <div className='bg-[url(/sketch.png)] bg-top-right inset-0 bg-cover bg-no-repeat h-full absolute '> */}
                  {/*  <img src="/sketch.png" alt="sketch"  className=' absolute  ' ></img> */}
