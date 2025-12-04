@@ -127,14 +127,19 @@ export default function PortfolioLanding() {
         groupedTestimonials.push(testimonials.slice(i, i + 3));
     }
     return (
-       <div>
+        <div>
             {/* Hero */}
-            <section className='bg-gradient-to-r from-white to-gray-50 py-12'>
-                <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-8 items-center'>
-                    <div className='md:col-span-2'>
+            <section  className='bg-[url(/sketch.png)] bg-cover bg-center h-screen relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-white to-gray-50 py-12'>
+                
+                {/* <div className='bg-[url(/sketch.png)] bg-top-right inset-0 bg-cover bg-no-repeat h-full absolute '> */}
+                 {/*  <img src="/sketch.png" alt="sketch"  className=' absolute  ' ></img> */}
+                {/* </div> */}
+                
+                <div className=' max-w-6xl mx-auto px-6 md:px-8 lg:px-12 grid md:grid-cols-3 gap-8 items-center'>
+                    <div className='md:col-span-2 p-5 bg-white rounded-lg'>
                         <h1 className='text-4xl md:text-5xl font-bold leading-tight'>Building reliable data and automation platforms</h1>
                         <p className='mt-4 text-lg text-gray-600'>Passionate IT engineer with a strong interest in coding, DevOps, infrastructure architecture, and Infrastructure as Code. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology. 5+ years experience, previously held the role of Data Engineer, and senior software developer, managing an engineer team.
-</p>
+                        </p>
                         <div className='mt-6 flex flex-wrap gap-3'>
                             <a href='#projects' className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow hover:bg-indigo-700 transition'>View Projects</a>
                             <a href="#contact" className='inline-flex items-center px-4 py-2 rounded-md border border-gray-200 text-sm text-gray-700 hover:bg-gray-50'>Get in touch</a>
@@ -185,14 +190,14 @@ export default function PortfolioLanding() {
                             <h3 className='text-lg font-semibold'>Michelle Nguyen</h3>
                             <p className='mt-2 text-sm text-gray-600 items-center'>IT Engineer</p>
                         </div>
-                       
-                        
+
+
                         <dl className='mt-4 text-sm text-gray-700 space-y-3'>
                             <div>
                                 <dt className='text-xs tetx-gray-500'>Current</dt>
                                 <dd className='font-medium'>Engineer - Freelance</dd>
                             </div>
-                
+
                             <div>
                                 <dt className='text-xs tetx-gray-500'>Education</dt>
                                 <dd className='font-medium'>Dip Cloud Architecture</dd>
@@ -252,9 +257,9 @@ export default function PortfolioLanding() {
                         <div className="mt-6 grid md:grid-cols-2 gap-6">
                             {posts.map((post) => (
                                 <Link
-                                to={`/blog/${post.id}`}
-                                key={post.id} 
-                                className="p-4 border rounded-md hover:shadow-sm transition">
+                                    to={`/blog/${post.id}`}
+                                    key={post.id}
+                                    className="p-4 border rounded-md hover:shadow-sm transition">
                                     <div className="text-sm text-gray-500">{post.date}</div>
                                     <h3 className="font-semibold mt-6 text-2xl">{post.title}</h3>
                                     <p className="mt-6 text-m text-gray-600">{post.excerpt}</p>
@@ -296,13 +301,37 @@ export default function PortfolioLanding() {
 
             </div>
 
+            <div className='relative overflow-hidden'>           
+                <section className="video-bg z-0 w-auto min-w-full min-h-full max-w-none object-cover">
+                        <video loop autoPlay muted playsInline src="https://seo.nlx.org/pearson/img5/bg-wave.mp4"></video>
+                        <div className="vid-btn">
+                            <button id="pause">
+                                <span aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path d="M48 64C21.5 64 0 85.5 0 112L0 400c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-288c0-26.5-21.5-48-48-48L48 64zm192 0c-26.5 0-48 21.5-48 48l0 288c0 26.5 21.5 48 48 48l32 0c26.5 0 48-21.5 48-48l0-288c0-26.5-21.5-48-48-48l-32 0z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span className="visuallyHidden">pause background video</span>
+                            </button>
+                            <button id="play">
+                                <span aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
+                                    </svg>
+                                </span>
+                                <span className="visuallyHidden">play background video</span>
+                            </button>
+                        </div>
+                </section>
+                <section className='relative  z-10 text-white p-12 md:p-24 text-center h-full '>
+                    <h1 className='text-5xl md:text-6xl font-bold leading-tight'>Michelle Nguyen</h1>
+                    <p className='mt-4 text-xl md:text-2xl'>IT Engineer creating data-driven tools, automation</p>
+                    <a href="#projects" className='mt-8 inline-block px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition'>View Projects</a>  
+                </section>
 
-            <section className='relative bg-indigo-800 text-white p-12 md:p-24 text-center'>
-
-                <h1 className='text-5xl md:text-6xl font-bold leading-tight'>Michelle Nguyen</h1>
-                <p className='mt-4 text-xl md:text-2xl'>Cloud Architect & Developer creating data-driven tools, automation</p>
-                <a href="#projects" className='mt-8 inline-block px-8 py-3 bg-white text-indigo-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition'>View Projects</a>
-            </section>
+            </div>
+            
 
             <main className='max-w-6xl mx-auto p-6 md:p-12 grid gap-16'>
 
@@ -333,7 +362,7 @@ export default function PortfolioLanding() {
                             className='grid md:grid-cols-3 gap-6 mt-6' >
 
                             {groupedTestimonials[index].map((t, i) => (
-                                <div key={i} className="p-6 bg-gray-50 rounded-md shadow-sm hover:shadow-md transition">
+                                <div key={i} className="p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
                                     <p className="text-gray-700 italic">"{t.feedback}"</p>
                                     <div className="mt-6 font-semibold text-indigo-600">{t.name}</div>
                                     <div className="text-sm text-gray-500">{t.title}</div>
@@ -356,14 +385,14 @@ export default function PortfolioLanding() {
                     </div>
 
                 </section>
-
-                {/* Contact Section */}
-                <section id="contact" className="bg-indigo-600 text-white rounded-lg shadow p-6 text-center">
-                    <h3 className="text-xl font-semibold">Let's work together</h3>
-                    <p className="mt-2 text-sm opacity-90">Available for freelance and contract work. Reach out to discuss your project.</p>
-                    <a href='mailto:michellehlcn.au@gmail.com' className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
-                </section>
+   
             </main>
+            {/* Contact Section */}
+            <section id="contact" className="bg-indigo-600 text-white shadow p-6 text-center">
+                <h3 className="text-xl font-semibold">Let's work together</h3>
+                <p className="mt-2 text-sm opacity-90">Available for freelance and contract work. Reach out to discuss your project.</p>
+                <a href='mailto:michellehlcn.au@gmail.com' className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
+            </section>
         </div>
     )
 }

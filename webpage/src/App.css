@@ -17,6 +17,49 @@
   margin-bottom: 1.25rem;
 }
 
+
+.visuallyHidden {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+}
+.video-bg {
+    border-bottom: 2px solid #512eab;
+    position: absolute
+}
+.vid-btn button {
+    display: block;
+    width: 12px;
+}
+
+.video-bg video {
+    max-height: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center top;
+    object-position: center top;
+    width: 100%;
+}
+.vid-btn {
+    align-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    bottom: 1rem;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    opacity: .5;
+    position: absolute;
+    right: 1rem;
+    transition: opacity .125 ease;
+    width: 32px;
+}
+
 /* Headings */
 .blogDetail h1,
 .blogDetail h2,
