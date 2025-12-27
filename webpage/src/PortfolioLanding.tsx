@@ -236,7 +236,7 @@ export default function PortfolioLanding() {
                                     <div className='md:flex flex-col p-6'>
                                         <img src={p.image} alt={p.title} className='h-40 w-full object-cover'></img>
                                         <div className='flex-1 mt-6'>
-                                            <h3 className='font-semibold text-2xl' hover:text-blue-700 ><a href={p.href}>{p.title}</a></h3>
+                                            <h3 className='font-semibold text-2xl' hover:text-blue-700 ><a target="_blank" rel="noopener noreferrer" href={p.href}>{p.title}</a></h3>
                                             <p className='mt-2 text-m text-gray-600'>{p.short}</p>
                                             <p className='mt-3 text-sm text-gray-700'>{p.description}</p>
                                             <p className='mt-4 flex flex-wrap gap-2'>
