@@ -11,15 +11,17 @@ const projects = [
         image: '/humm-wf.png',
         short: 'Humm buy now pay later <> Webflow',
         description: 'Integration between non supportive native platform Webflow and Humm Payment',
-        tags: ['Javascript', 'Java', 'GraphAPI']
+        tags: ['Javascript', 'Java', 'GraphAPI'],
+        href:''
     },
     {
         id: 2,
-        title: 'STRIDEPR',
+        title: 'stridepr.com.au',
         image: '/strava-pr.png',
         short: 'OAuth & automation for Strava activity posting via Parkrun weekly',
         description: 'Automates activity posting with AI descriptions',
-        tags: ['API', 'OAuth', 'Automation']
+        tags: ['API', 'OAuth', 'Automation'],
+        href: 'stridepr.com.au'
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ const projects = [
         image: '/email.jpg',
         short: 'Payment invoice reminder',
         description: 'The tool helps user to send reminders to clients to pay invoices before the due date',
-        tags: ['Golang', 'Smtp']
+        tags: ['Golang', 'Smtp'],
+        href: ''
     },
     {
         id: 4,
@@ -35,7 +38,8 @@ const projects = [
         image: '/pipedrive.svg',
         short: 'CRM pipedrive <> Opensolar',
         description: 'Pipelines between CRM pipedrive, Onedrive, Opensolar to create auto transactions, purchase, deals.',
-        tags: ['Python', 'MongoDB', 'GraphAPI']
+        tags: ['Python', 'MongoDB', 'GraphAPI'],
+        href: ''
     },
 ]
 const posts = [
@@ -232,7 +236,7 @@ export default function PortfolioLanding() {
                                     <div className='md:flex flex-col p-6'>
                                         <img src={p.image} alt={p.title} className='h-40 w-full object-cover'></img>
                                         <div className='flex-1 mt-6'>
-                                            <h3 className='font-semibold text-2xl'>{p.title}</h3>
+                                            <h3 className='font-semibold text-2xl'><a href={p.href}>{p.title}</a></h3>
                                             <p className='mt-2 text-m text-gray-600'>{p.short}</p>
                                             <p className='mt-3 text-sm text-gray-700'>{p.description}</p>
                                             <p className='mt-4 flex flex-wrap gap-2'>
@@ -388,7 +392,7 @@ export default function PortfolioLanding() {
    
             </main>
             {/* Contact Section */}
-            <section id="contact" className="bg-indigo-600 text-white shadow p-6 text-center">
+            <section id="contact" className="bg-gradient-cta  text-white shadow p-6 text-center">
                 <h3 className="text-xl font-semibold">Let's work together</h3>
                 <p className="mt-2 text-sm opacity-90">Available for freelance and contract work. Reach out to discuss your project.</p>
                 <a href='mailto:michellehlcn.au@gmail.com' className="inline-block mt-4 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium">Email me</a>
