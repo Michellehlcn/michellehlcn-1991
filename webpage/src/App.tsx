@@ -3,6 +3,8 @@ import './App.css'
 import PortfolioLanding from './PortfolioLanding'
 import { _Header } from './components/_Header'
 import BlogDetail from './pages/BlogDetail'
+import { _Footer } from './components/_Footer'
+// import Gallery from './pages/Gallery'
 
 function App() {
   return (
@@ -13,12 +15,12 @@ function App() {
           <_Header />
           <Routes>
             <Route path="/" element={<PortfolioLanding />} />
+            {/* <Route path="/Artwork" element={<Gallery />} /> */}
             <Route path="/blog/:slug" element={<BlogDetail />} />
           </Routes>
           {/* Footer */}
-          <footer className='text-center text-sm text-gray-500 py-6'>
-            @ {new Date().getFullYear()} Michelle Nguyen
-          </footer>
+          <_Footer />
+          
         </div>
       </Router>
 

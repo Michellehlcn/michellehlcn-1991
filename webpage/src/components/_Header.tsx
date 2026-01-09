@@ -1,21 +1,19 @@
 export function _Header() {
     return (
-        <header className='bg-white shadow-sm sticky top-0 z-40'>
-                <div className='max-w-6xl mx-auto px-6 md:px-8 lg:px-12 py-4 flex items-center justify-between'>
-                    <div className='flex items-center gap-4'>
-                        <div className='w-12 h-12 rounded-md bg-gradient-to-br from-indigo-600 to-sky-500 flex items-center justify-center text-white font-bold'>MN</div>
-                        <div>
-                            <div className='text-lg font-semibold'>Michelle Nguyen</div>
-                            <div className='text-sm text-gray-500'>Cloud Architect & Developer</div>
-                        </div>
-                    </div>
-
-                    <nav className='hidden md:flex gap-8 text-sm text-gray-700'>
-                        <a href="#blog" className='hover:text-indigo-600'>Blog</a>
-                        <a href="#projects" className='hover:text-indigo-600'>Projects</a>
-                        <a href="#expertise" className='hover:text-indigo-600'>Expertise</a>
-                        <a href="#cv" className='hover:text-indigo-600'>CV</a>
-                        <a href="#contact" className='hover:text-indigo-600'>Contact</a>
+        <header className='sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm ring ring-gray-950/5 supports-[backdrop-filter]:bg-background/60
+        mr-[calc(100%-100vw)] flex h-14 items-center justify-between px-4  after:-bottom-px sm:px-6 '>
+                <div>
+                    <a className="shrink-0 mt-2 text-3xl tracking-tighter sm:text-3xl text-pretty" aria-label="Home" href="/">MICHELLE NGUYEN</a> 
+                </div>
+                <div className="@container flex flex-1 justify-start pl-8"></div>
+                <div>
+                    <nav className='flex items-center gap-5 max-md:hidden lg:gap-6'>
+                        <a href="#blog" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Blog</a>
+                        <a href="#projects" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Projects</a>
+                        {/* <a href="#expertise" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Expertise</a>
+                        <a href="#cv" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>CV</a> */}
+                        <a href="#contact" className='text-s/6 text-gray-950 dark:text-white rounded-full bg-gray-950 px-2.5 py-0.5 text-sm/6 font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-950 dark:bg-gray-700 dark:text-white dark:focus-visible:outline-white'>Contact</a>
+                        {/* <a href="/artwork" className='hover:text-indigo-600'>Artwork</a> */}
                     </nav>
                 </div>
         </header>
