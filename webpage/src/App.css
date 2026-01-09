@@ -11,6 +11,14 @@
 .hero-container {
   width: calc(100% - 40px);
 }
+
+.custom-text-shadow {
+  text-shadow:
+    -1px -1px 0 rgb(97, 95, 95),
+    1px -1px 0 rgb(97, 95, 95),
+    -1px 1px 0 rgb(97, 95, 95),
+    1px 1px 0 rgb(97, 95, 95);
+}
 /* #0000fe */
 .blogDetail {
   font-family: "Inter", system-ui, sans-serif;

@@ -167,7 +167,7 @@ export default function PortfolioLanding() {
                                 <div className='font-medium'>Key Skills</div>
                                 <div className='mt-3 flex flex-wrap gap-2'>
                                 {key_skills.map((s) => (
-                                    <span key={s} className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20 dark:text-white dark:ring-white/10 dark:hover:ring-white/20 px-4 py-2 mt-4 font-mono text-xs/6 tracking-wide text-gray-600 dark:text-gray-400'>{s}</span>
+                                    <span key={s} className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20  px-4 py-2 mt-4 font-mono text-xs/6 tracking-wide text-gray-600 '>{s}</span>
                                 ))}
                             </div>
                             </ul>
@@ -239,7 +239,7 @@ export default function PortfolioLanding() {
                                                  {p.href? 
                                                  <>
                                                     <div className='flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 '>
-                                                        <a target="_blank" rel="noopener noreferrer" href={p.href} className="mt-5 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:hover:bg-gray-200 dark:focus-visible:outline-white dark:focus-visible:outline-white px-4 py-2">See Product Page <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
+                                                        <a target="_blank" rel="noopener noreferrer" href={p.href} className="mt-5 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 px-4 py-2">See Product Page <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
                                                     </div> 
                                                 </>: <></>}
                                              </p>

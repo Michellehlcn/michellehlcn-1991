@@ -24,8 +24,8 @@
                             </button>
                         </div>
                 </section>
-                <section className='relative  z-10 text-white p-5 md:p-5 text-center h-full '>
-                    <h1 className='mt-2 text-6xl tracking-tighter sm:text-8xl text-pretty'>Michelle Nguyen</h1>
+                <section className='relative  z-10 text-white p-5 md:p-5 text-center h-full custom-text-shadow' >
+                    <h1 className='mt-2 text-6xl tracking-tighter sm:text-8xl text-pretty' >Michelle Nguyen</h1>
                     {/* <p className='mt-4 text-2xl tracking-tighter sm:text-2xl text-pretty'>IT Engineer creating data-driven tools, automation.</p> */}
                     <p className='mt-4 text-xl tracking-tighter sm:text-xl text-pretty'>Open to contracts & collaborations. Email me: michellehlcn.au@gmail.com</p>
                     <a href="#projects" className='bg-white mt-8 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20 dark:text-white dark:ring-white/10 dark:hover:ring-white/20 px-4 py-2'>View Projects <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
