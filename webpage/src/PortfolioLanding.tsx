@@ -225,7 +225,7 @@ export default function PortfolioLanding() {
 
                          <div className='mt-6 grid md:grid-cols-3 gap-6'>
                              {projects.map((p) => (
-                                 <div key={p.id} className='rounded-md overflow-hidden border'>
+                                 <div key={p.id} className='rounded-md overflow-hidden border m-5 md:m-0'>
                                      <div className='md:flex flex-col p-6'>
                                          <img src={p.image} alt={p.title} className='h-40 w-full object-cover'></img>
                                          <div className='flex-1 mt-6'>
@@ -261,7 +261,7 @@ export default function PortfolioLanding() {
                                  <Link
                                      to={`/blog/${post.id}`}
                                      key={post.id}
-                                     className="p-4 border hover:shadow-sm bg-card rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:shadow-lg ">
+                                     className="m-5 md:m-0 p-4 border hover:shadow-sm bg-card rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:shadow-lg ">
                                      <div className="text-sm text-gray-500">{post.date}</div>
                                      <h2 className="mt-5 text-[2.5rem]/none font-medium tracking-tight text-pretty hover:text-blue-700 ">{post.title}</h2>
                                      <p className="mt-6 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400">{post.excerpt}</p>
