@@ -292,7 +292,7 @@ export default function PortfolioLanding() {
                                             {t.feedback}
                                         </p>
                                      </blockquote>
-                                     <figcaption className="grid grid-cols-[max-content_1fr] gap-6 py-2 px-8 sm:px-16">
+                                     <figcaption className="grid grid-rows-[max-content_1fr] gap-3 py-2 px-8 sm:px-16">
                                             <div className="mt-6 font-medium">{t.name}</div>
                                             <div className="text-gray-600 dark:text-gray-400">{t.title}</div>
                                      </figcaption>
