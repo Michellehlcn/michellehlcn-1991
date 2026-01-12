@@ -142,7 +142,7 @@ export default function PortfolioLanding() {
                     <div className=' max-lg:line-b sm:px-2 '>
                         <div className='md:col-span-2 p-5 bg-white ring ring-gray-950/5 '>
                             <h1 className='mt-2 text-6xl tracking-tighter sm:text-8xl text-pretty'>Building reliable data and automation platforms</h1>
-                            <p className='mt-4 max-w-2xl text-lg/7 font-medium text-pretty text-gray-600 dark:text-gray-400'>Passionate IT engineer with a strong interest in coding, DevOps, infrastructure architecture, and Infrastructure as Code. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology. 5+ years experience, previously held the role of Data Engineer, and senior software developer, managing an engineer team.
+                            <p className='mt-4 max-w-2xl text-lg/7 font-medium text-pretty text-gray-600 dark:text-gray-400'>Passionate IT engineer with a strong interest in Coding, Web development, Design, DevOps, Infrastructure architecture. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology.
                             </p>
                             <div className='mt-6 flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 lg:border-t lg:border-(--grid-line-color)'>
                                 <a href='#projects' className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:hover:bg-gray-200 dark:focus-visible:outline-white dark:focus-visible:outline-white px-4 py-2'>View Projects <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
@@ -258,10 +258,12 @@ export default function PortfolioLanding() {
 
                          <div className="mt-6 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                              {posts.map((post) => (
+                                
                                  <Link
                                      to={`/blog/${post.id}`}
                                      key={post.id}
                                      className="m-5 md:m-0 p-4 border hover:shadow-sm bg-card rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:shadow-lg ">
+                                     <div className="css-1gc241n image-container svelte-5h8on2 border-and-scale with-aspect-ratio square"><img sizes="100vw" className="svelte-5h8on2 with-aspect-ratio" src="https://cdn.sanity.io/images/8m3angk4/production/0e835848ce8d140418c31a7123ba615af9b73312-1980x800.png?w=420&amp;auto=format" alt=""></img></div>
                                      <div className="text-sm text-gray-500">{post.date}</div>
                                      <h2 className="mt-5 text-[2.5rem]/none font-medium tracking-tight text-pretty hover:text-blue-700 ">{post.title}</h2>
                                      <p className="mt-6 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400">{post.excerpt}</p>
@@ -274,10 +276,10 @@ export default function PortfolioLanding() {
                      </div>
 
                       {/* Testimonials */}
-                 <section id="testimonials" className="mt-20">
-                     <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14">Client Testimonials</h2>
-                     <div className="relative overflow-hidden">
-                         <motion.div
+                    <section id="testimonials" className="mt-20">
+                        <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14">Client Testimonials</h2>
+                        <div className="relative overflow-hidden">
+                            <motion.div
                              key={index}
                              initial={{ x: 100, opacity: 0 }}
                              animate={{ x: 0, opacity: 1 }}
@@ -286,43 +288,104 @@ export default function PortfolioLanding() {
                              className='grid md:grid-cols-3 gap-6 mt-6' >
 
                              {groupedTestimonials[index].map((t, i) => (
-                                 <figure key={i} className="ring ring-gray-950/5  group row-span-2 grid max-lg:mx-auto max-lg:max-w-3xl max-lg:gap-y-5 lg:grid-rows-subgrid  transition">
-                                     <blockquote className='mx-auto flex items-center py-2 text-sm/7 tracking-tight max-lg:line-y lg:group-first:line-y px-8 text-xl/9 sm:px-16 sm:text-2xl/10'>
+                                <figure key={i} className="ring ring-gray-950/5  group row-span-2 grid max-lg:mx-auto max-lg:max-w-3xl max-lg:gap-y-5 lg:grid-rows-subgrid  transition">
+                                    <blockquote className='mx-auto flex items-center py-2 text-sm/7 tracking-tight max-lg:line-y lg:group-first:line-y px-8 text-xl/9 sm:px-16 sm:text-2xl/10'>
                                         <p className="relative before:pointer-events-none before:absolute before:top-4 before:-left-6 before:text-[6rem] before:text-gray-950/10 before:content-['“'] sm:before:-left-8 lg:before:text-[8rem] dark:before:text-white/10">
                                             {t.feedback}
                                         </p>
-                                     </blockquote>
-                                     <figcaption className="grid grid-rows-[max-content_1fr] gap-3 py-2 px-8 sm:px-16">
-                                            <div className="mt-6 font-medium">{t.name}</div>
-                                            <div className="text-gray-600 dark:text-gray-400">{t.title}</div>
-                                     </figcaption>
-                                    
-                                     
-                                 </figure>
+                                    </blockquote>
+                                    <figcaption className="grid grid-rows-[max-content_1fr] gap-3 py-2 px-8 sm:px-16">
+                                        <div className="mt-6 font-medium">{t.name}</div>
+                                        <div className="text-gray-600 dark:text-gray-400">{t.title}</div>
+                                    </figcaption>
+                                </figure>
                              ))}
-                         </motion.div>
+                            </motion.div>
 
-                         {/*  Arrows */}
-                         <button
-                             onClick={prev}
-                             className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
-                             <ChevronLeft className='w-5 h-5 text-indigo-600' />
-                         </button>
-                         <button
-                             onClick={next}
-                             className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
-                         >
-                             <ChevronRight className='w-5 h-5 text-indigo-600' />
-                         </button>
-                     </div>
+                            {/*  Arrows */}
+                            <button
+                                onClick={prev}
+                                className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
+                                <ChevronLeft className='w-5 h-5 text-indigo-600' />
+                            </button>
+                            <button
+                                onClick={next}
+                                className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
+                            >
+                                <ChevronRight className='w-5 h-5 text-indigo-600' />
+                            </button>
+                        </div>
+                    </section>
 
-                 </section>
-                 </section>
-             </div>
-                </div>
+                    <section id="aboutme" className='line-y mt-30 grid grid-cols-1 gap-10 lg:grid-cols-2'>
+                        <div className='lg:border-r lg:border-gray-950/5 dark:lg:border-white/5'>
+                             <div className='grid grid-cols-1 gap-y-2 px-4 py-2 max-lg:line-b sm:px-2 lg:line-b/half'>
+                                <h2 className='font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-fuchsia-500 dark:text-fuchsia-400'>Q&A Section</h2>
+                                <p className='text-[2.5rem]/none font-medium tracking-tight text-pretty'>About me.</p>
+                             </div>
+                        </div>
+                        <div className='lg:border-l lg:border-gray-950/5 dark:lg:border-white/5'>
+                             <div className='grid grid-cols-1 gap-10'>
+                                <div className='group'>
+                                    <h3 className='px-4 py-2 sm:px-2 font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 dark:text-gray-500' >General</h3>
+                                    <dl>
+                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                <div className="text-left text-sm/7 font-semibold text-pretty">How did you build this site?</div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                            </summary>
+                                            <div className="prose mt-4">
+                                                <p>I've gotten asked a few times how I went about building the site. The stack I used: Typescript, TailwindCSS, Supabase, Netlify, Umami, and combined with some artwork I made during my spare time.</p>
+                                            </div>
+                                        </details>
+
+                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                <div className="text-left text-sm/7 font-semibold text-pretty">Why did you choose to work in IT?</div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                            </summary>
+                                            <div className="prose mt-4">
+                                                <p>It has been over 5 years previously held the role of Data Engineer, and software developer. My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then. </p>
+                                            </div>
+                                        </details>
+
+                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                <div className="text-left text-sm/7 font-semibold text-pretty">How were clients' comments about your services?</div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                            </summary>
+                                            <div className="prose mt-4">
+                                                <p>I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field.</p>
+                                            </div>
+                                        </details>
+
+                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                <div className="text-left text-sm/7 font-semibold text-pretty">What kind of work will I do?</div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                            </summary>
+                                            <div className="prose mt-4">
+                                                <p>I am available for hire, contract and permanent employment. I can help with website develoment, web app development, backend integration, e-commerce websites, LLM Backend complex, active design, new prototypes and creative experiments where more freedom will be to explore, test, and ship alongside experienced builders across organization. Feel free to reach out at <a href="mailto:michellehlcn.aut@gmail.com">michellehlcn.au@gmail.com</a>.</p>
+                                            </div>
+                                        </details>
+                                    </dl>
+                                </div>
+                             </div>
+                        </div>
+
+                    </section>
+
+
+                </section>
             </div>
         </div>
-              </main>
+    </div>
+</div>
+</main>
 
     )
 }

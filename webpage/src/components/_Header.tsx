@@ -8,8 +8,10 @@ export function _Header() {
                 <div className="@container flex flex-1 justify-start pl-8"></div>
                 <div>
                     <nav className='flex items-center gap-5 max-md:hidden lg:gap-6'>
+                        <a href="#aboutme" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>About</a>
                         <a href="#blog" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Blog</a>
                         <a href="#projects" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Projects</a>
+                          
                         {/* <a href="#expertise" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Expertise</a>
                         <a href="#cv" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>CV</a> */}
                         <a href="#contact" className='text-s/6 text-gray-950 dark:text-white rounded-full bg-gray-950 px-2.5 py-0.5 text-sm/6 font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-950 dark:bg-gray-700 dark:text-white dark:focus-visible:outline-white'>Contact</a>
