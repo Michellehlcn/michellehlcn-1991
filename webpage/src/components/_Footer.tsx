@@ -33,7 +33,7 @@
                 
             </div>
             <section className=" sm:col-span-full  @container grid w-full ">
-                    <span className="mt-4 mb-4 text-xl tracking-tighter sm:text-xl text-pretty"> @ {new Date().getFullYear()} Michelle Nguyen. All rights reserved.</span>
+                    <span className="mt-4 mb-4 text-xl tracking-tighter sm:text-xl text-pretty"> @ 2020-{new Date().getFullYear()} Michelle Nguyen. All rights reserved.</span>
             </section>
         </footer>
     )
