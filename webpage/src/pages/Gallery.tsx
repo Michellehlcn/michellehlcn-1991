@@ -71,6 +71,12 @@ const Gallery: NextPage = () => {
       category: "Photography",
     },
      {
+      id: "art-17.png",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-17.png",
+      category: "Photography",
+    },{
       id: "art-5.jpg",
       title: "Waves in Motion",
       description: "Dynamic ocean energy captured in motion blur.",
@@ -127,7 +133,48 @@ const Gallery: NextPage = () => {
       image: "/arts/art-12.jpg",
       category: "Photography",
     },
-     
+      {
+      id: "art-18.jpg",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-18.jpg",
+      category: "Photography",
+    },
+     {
+      id: "art-19.jpg",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-19.jpg",
+      category: "Photography",
+    },
+     {
+      id: "art-20.jpg",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-20.jpg",
+      category: "Photography",
+    },
+     {
+      id: "art-21.jpg",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-21.jpg",
+      category: "Photography",
+    },
+     {
+      id: "art-22.jpg",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-22.jpg",
+      category: "Photography",
+    },
+     {
+      id: "art-23.jpg",
+      title: "Waves in Motion",
+      description: "Dynamic ocean energy captured in motion blur.",
+      image: "/arts/art-23.jpg",
+      category: "Photography",
+    },
 
   ];
   return (
