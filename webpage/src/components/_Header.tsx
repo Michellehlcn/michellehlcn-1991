@@ -11,7 +11,7 @@ export function _Header() {
                 <div className="@container flex flex-1 justify-start pl-8"></div>
                 <div>
                     <nav className='flex items-center gap-5 max-md:hidden lg:gap-6'>
-                        <a href="/artwork" className='hover:text-indigo-600 font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-fuchsia-500 dark:text-fuchsia-400'>Artwork</a>
+                        <a href="/#artwork" className='hover:text-indigo-600 font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-fuchsia-500 dark:text-fuchsia-400'>Artwork</a>
                         <div className="h-6 w-px bg-gray-950/10 dark:bg-white/10"></div>
                         <Link to="/#aboutme"><button  id="_aboutme" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>About</button></Link>
                         <Link to="/#blog"><button id="_blog" className='hover:text-indigo-600 text-s/6 text-gray-950 dark:text-white'>Blog</button></Link>
