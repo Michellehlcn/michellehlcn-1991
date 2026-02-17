@@ -186,7 +186,7 @@ const Gallery: NextPage = () => {
             <span></span>
             <span></span>
           </div>
-          <h1 className="mt-8 mb-4 text-black text-base font-bold uppercase tracking-widest">Sketch, Hand Drawings, Digital Arts</h1>
+          <h1 className="mt-8 mb-4 text-black  font-bold uppercase tracking-widest text-3xl">Sketch, Hand Drawings, Digital Arts</h1>
           <h1 className="mt-8 mb-4 text-black text-base font-bold uppercase tracking-widest">by Michelle Nguyen</h1>
 
           <p className="text-gray-600 text-pretty max-w-[40ch] text-black sm:max-w-[32ch]">Explore the diverse range of Michelle's drawings, from dynamic portraits, still lifes, to intricate life studies. Each piece showcases a unique blend of ambient mode and artistic flair, capturing the essence of form and perspective, where every object tells a story of its own.</p>
