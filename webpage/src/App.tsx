@@ -18,7 +18,7 @@ function App() {
           <_Header />
           <Routes>
             <Route path="/" element={<PortfolioLanding />} />
-            <Route path="/#artwork" element={<Gallery />} />
+            <Route path="/artwork" element={<Gallery />} />
             <Route path="/blog/:slug" element={<BlogDetail />} />
           </Routes>
           {/* Footer */}
