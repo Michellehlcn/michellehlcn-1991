@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from 'react-router-dom';
 
+
+
 const key_skills = ['Python', 'Java', 'Javascript', 'Typescript', 'Go', 'Rust', 'Postgres', 'AWS', 'GCP', 'Terraform', 'Lambda']
 
 const projects = [
@@ -120,6 +122,7 @@ const testimonials = [
     },
 ];
 export default function PortfolioLanding() {
+   
     const [index, setIndex] = useState(0);
     const next = () => setIndex((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
     const prev = () => setIndex((prev) => (prev - 1 + Math.ceil(testimonials.length / 3)) % Math.ceil(testimonials.length / 3));

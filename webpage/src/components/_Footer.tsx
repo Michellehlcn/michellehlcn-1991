@@ -24,7 +24,7 @@
                             </button>
                         </div>
                 </section>
-                <section className='relative  z-10 text-white p-5 md:p-5 text-center h-full custom-text-shadow' >
+                <section id="contact" className='relative  z-10 text-white p-5 md:p-5 text-center h-full custom-text-shadow' >
                     <h1 className='mt-2 text-6xl tracking-tighter sm:text-8xl text-pretty' >Michelle Nguyen</h1>
                     {/* <p className='mt-4 text-2xl tracking-tighter sm:text-2xl text-pretty'>IT Engineer creating data-driven tools, automation.</p> */}
                     <p className='mt-4 text-xl tracking-tighter sm:text-xl text-pretty'>Open to contracts & collaborations. Email me: michellehlcn.au@gmail.com</p>
