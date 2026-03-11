@@ -136,259 +136,273 @@ export default function PortfolioLanding() {
         groupedTestimonials.push(testimonials.slice(i, i + 3));
     }
     return (
+
+       //background: url(&quot;https://production-njuko-v2-upload.s3.amazonaws.com/6911b6855f67d15db3ce2eb6_parramatta-half-marathon-2026/6911b6855f67d15db3ce2eb6_background_xsa61P_REWARD_BG_01.jpg&quot;) center center; 
     <main className='flex min-h-dvh flex-col '>
-        <div className='grid flex-1 grid-rows-[1fr_auto] overflow-clip grid-cols-[1fr_var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)_1fr] [--gutter-width:--spacing(6)] lg:[--gutter-width:--spacing(10)]'>
-            <div className="col-start-2 row-span-full row-start-1 max-sm:hidden  bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--grid-line-color)_0,var(--grid-line-color)_1px,transparent_0,transparent_50%)]"></div>
-            <div className="col-start-4 row-span-full row-start-1 max-sm:hidden  bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--grid-line-color)_0,var(--grid-line-color)_1px,transparent_0,transparent_50%)]"></div>
-            <div className='col-start-3 row-start-1 max-sm:col-span-full max-sm:col-start-1'>
-                <div className='line-y mt-12 grid gap-x-5 sm:mt-20 lg:mt-24 lg:grid-cols-[3fr_2fr] '>
-                    <div className=' max-lg:line-b sm:px-2 '>
-                        <div className='md:col-span-2 p-5 bg-white ring ring-gray-950/5 '>
-                            <h1 className='mt-2 text-6xl tracking-tighter sm:text-8xl text-pretty'>Building reliable data and automation platforms</h1>
-                            <p className='mt-4 max-w-2xl text-lg/7 font-medium text-pretty text-gray-600 dark:text-gray-400'>Passionate IT engineer with a strong interest in Coding, Web development, Design, DevOps, Infrastructure architecture. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology.
-                            </p>
-                            <div className='mt-6 flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 lg:border-t lg:border-(--grid-line-color)'>
-                                <a href='#projects' className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:hover:bg-gray-200 dark:focus-visible:outline-white dark:focus-visible:outline-white px-4 py-2'>View Projects <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
-                                <a href="#contact" className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20 dark:text-white dark:ring-white/10 dark:hover:ring-white/20 px-4 py-2'>Get in touch <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
+        
+            <div className="firstBanner" style={{ backgroundImage: 'url("https://production-njuko-v2-upload.s3.amazonaws.com/6911b6855f67d15db3ce2eb6_parramatta-half-marathon-2026/6911b6855f67d15db3ce2eb6_background_xsa61P_REWARD_BG_01.jpg")', backgroundPosition: 'center', backgroundSize: 'cover', minHeight: '100vh'}}>
+                <div className='grid flex-1 grid-rows-[1fr_auto] overflow-clip grid-cols-[1fr_var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)_1fr] [--gutter-width:--spacing(6)] lg:[--gutter-width:--spacing(10)]'>
+                    {/* // Left space */}
+                    <div className="col-start-2 row-span-full row-start-1 max-sm:hidden  bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--grid-line-color)_0,var(--grid-line-color)_1px,transparent_0,transparent_50%)]"></div>
+                    {/* Right space */}
+                    <div className="col-start-4 row-span-full row-start-1 max-sm:hidden  bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--grid-line-color)_0,var(--grid-line-color)_1px,transparent_0,transparent_50%)]"></div>
+                    {/* Middle content */}
+                    <div className='col-start-3 row-start-1 max-sm:col-span-full max-sm:col-start-1'>
+                        <div className='line-y mt-6 mb-12 grid gap-x-5 sm:mt-20 lg:mt-12 lg:grid-cols-[3fr_2fr] '> 
+                            {/* Left column: Intro + key skills    */}
+                            <div className=' max-lg:line-b sm:px-2 '>
+                                <div className='md:col-span-2 p-5 bg-white ring ring-gray-950/5 '>
+                                    <h1 className='mt-2 text-6xl tracking-tighter sm:text-8xl text-pretty'>Building reliable data and automation platforms</h1>
+                                    <p className='mt-4 max-w-2xl text-lg/7 font-medium text-pretty text-gray-600 dark:text-gray-400'>Passionate IT engineer with a strong interest in Coding, Web development, Design, DevOps, Infrastructure architecture. I’m driven by curiosity and a desire to push the boundaries of what’s possible in technology.
+                                    </p>
+                                    <div className='mt-6 flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 lg:border-t lg:border-(--grid-line-color)'>
+                                        <a href='#projects' className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white dark:hover:bg-gray-200 dark:focus-visible:outline-white dark:focus-visible:outline-white px-4 py-2'>View Projects <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
+                                        <a href="#contact" className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20 dark:text-white dark:ring-white/10 dark:hover:ring-white/20 px-4 py-2'>Get in touch <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
+                                    </div>
+
+                                    <ul className='mt-8 grid sm:grid-cols-3 gap-4 '>
+                                        <li>
+                                            <div className='font-medium'>Location</div>
+                                            <div className='mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>Sydney, Australia</div>
+                                        </li>
+                                        <li>
+                                            <div className='font-medium'>Availability</div>
+                                            <div className='mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>Freelance / Contract</div>
+                                        </li>
+                                        <li>
+                                            <div className=' font-medium'>Experience</div>
+                                            <div className='mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>Software & Data Engineering 5+ years</div>
+                                        </li>
+                                    </ul>
+                                    <ul className='mt-8'>
+                                        <div className='font-medium'>Key Skills</div>
+                                        <div className='mt-3 flex flex-wrap gap-2'>
+                                        {key_skills.map((s) => (
+                                            <span key={s} className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20  px-4 py-2 mt-4 font-mono text-xs/6 tracking-wide text-gray-600 '>{s}</span>
+                                        ))}
+                                    </div>
+                                    </ul>
+                                </div>   
                             </div>
 
-                            <ul className='mt-8 grid sm:grid-cols-3 gap-4 '>
-                                <li>
-                                    <div className='font-medium'>Location</div>
-                                    <div className='mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>Sydney, Australia</div>
-                                </li>
-                                <li>
-                                    <div className='font-medium'>Availability</div>
-                                    <div className='mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>Freelance / Contract</div>
-                                </li>
-                                <li>
-                                    <div className=' font-medium'>Experience</div>
-                                    <div className='mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>Software & Data Engineering 5+ years</div>
-                                </li>
-                            </ul>
-                            <ul className='mt-8'>
-                                <div className='font-medium'>Key Skills</div>
-                                <div className='mt-3 flex flex-wrap gap-2'>
-                                {key_skills.map((s) => (
-                                    <span key={s} className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20  px-4 py-2 mt-4 font-mono text-xs/6 tracking-wide text-gray-600 '>{s}</span>
-                                ))}
-                            </div>
-                            </ul>
-                        </div>   
-                    </div>
+                            {/* Right column: Artwork */}
 
-                    <div className='grid grid-cols-1 grid-rows-[1fr_auto] bg-white ring ring-gray-950/5 '>
-                        <div className='flex flex-col justify-evenly items-center px-4 py-2 max-lg:line-y max-lg:mt-6 sm:px-2'>
-                            <div className='cursor-pointer max-w-2xl text-lg/7 font-medium text-pretty text-gray-600 dark:text-gray-400'>
-                                 <div className="group relative">
-                                    <img src="/arts/art-15.png" alt="Default" className="aspect-870/800 h-full w-full object-cover opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
-                                    <img src="/arts/art-14.png" alt="Hover" className="aspect-870/800 absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <div className='grid grid-cols-1 grid-rows-[1fr_auto] bg-white ring ring-gray-950/5 '>
+                                <div className='flex flex-col justify-evenly items-center px-4 py-2 max-lg:line-y max-lg:mt-6 sm:px-2'>
+                                    <div className='cursor-pointer max-w-2xl text-lg/7 font-medium text-pretty text-gray-600 dark:text-gray-400'>
+                                        <div className="group relative">
+                                            <img src="/arts/art-15.png" alt="Default" className="aspect-870/800 h-full w-full object-cover opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
+                                            <img src="/arts/art-14.png" alt="Hover" className="aspect-870/800 absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div className='mt-12 mb-12'>
+                            <div className='line-y grid grid-cols-3 ' aria-orientation="horizontal">
+                                <div className='group relative flex items-center justify-center  max-lg:flex-col  '>
+                                    <div className='absolute -inset-x-px inset-y-0 bg-indigo-500/5 dark:bg-indigo-500/5'>
+                                    </div>
+                                    <img src="/arts/art-13.png" className='ring ring-gray-950/5 '></img>
+                                </div>
+                                <div className='group relative flex items-center justify-center max-lg:flex-col '>
+                                    <div className='absolute -inset-x-px inset-y-0 bg-indigo-500/5  dark:bg-indigo-500/5'>
+                                    </div>
+                                    <img src="/arts/art-14.png" className='ring ring-gray-950/5 '></img>
+                                </div>
+                                <div className='group relative flex items-center justify-center  max-lg:flex-col '>
+                                    <div className='absolute -inset-x-px inset-y-0 bg-gradient-to-r from-blue-500/4 to-pink-500/4 dark:bg-indigo-500/5'>
+                                    </div>
+                                    <img src="/arts/art-15.png" className='ring ring-gray-950/5 '></img>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div className='mt-20'>
-                    <div className='line-y grid grid-cols-3 ' aria-orientation="horizontal">
-                        <div className='group relative flex items-center justify-center  max-lg:flex-col  '>
-                            <div className='absolute -inset-x-px inset-y-0 bg-indigo-500/5 dark:bg-indigo-500/5'>
-                            </div>
-                            <img src="/arts/art-13.png" className='ring ring-gray-950/5 '></img>
-                        </div>
-                        <div className='group relative flex items-center justify-center max-lg:flex-col '>
-                            <div className='absolute -inset-x-px inset-y-0 bg-indigo-500/5  dark:bg-indigo-500/5'>
-                            </div>
-                            <img src="/arts/art-14.png" className='ring ring-gray-950/5 '></img>
-                        </div>
-                        <div className='group relative flex items-center justify-center  max-lg:flex-col '>
-                            <div className='absolute -inset-x-px inset-y-0 bg-gradient-to-r from-blue-500/4 to-pink-500/4 dark:bg-indigo-500/5'>
-                            </div>
-                            <img src="/arts/art-15.png" className='ring ring-gray-950/5 '></img>
-                        </div>
-                    </div>
-                </div>
-
-        <div className='mt-20'>
-            
-            
-            {/* Main content area: CV (left) +details (right) */}
-             <div className=' mx-auto'>
-                
-
-                 {/* Right column: Blog + CV details + Projects + Expertise */}
-                 <section className='space-y-8'>
-                     
-                     {/* Projects List*/}
-                     <article id="projects" className=''>
-                         <div className='flex items-center justify-between'>
-                             <h2 className='max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14'>Projects</h2>
-                             {/* <a href="#" className='tetx-sm text-indigo-600'>See all projects</a> */}
-                         </div>
-
-                         <div className='mt-6 grid md:grid-cols-3 gap-6'>
-                             {projects.map((p) => (
-                                 <div key={p.id} className='rounded-md overflow-hidden border m-5 md:m-0'>
-                                     <div className='md:flex flex-col p-6'>
-                                         <img src={p.image} alt={p.title} className='h-40 w-full object-cover'></img>
-                                         <div className='flex-1 mt-6'>
-                                             <h2 className='text-[2.5rem]/none font-medium tracking-tight text-pretty hover:text-blue-700 '><a target="_blank" rel="noopener noreferrer" href={p.href}>{p.title}</a></h2>
-                                             <p className='mt-2 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>{p.short}</p>
-                                             <p className='mt-3 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>{p.description}</p>
-                                             <p className='mt-4 flex flex-wrap gap-2'>
-                                                 {p.tags?.map((t) => (
-                                                     <span key={t} className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20 dark:text-white dark:ring-white/10 dark:hover:ring-white/20 px-4 py-2 mt-4 font-mono text-xs/6 tracking-wide text-gray-600 dark:text-gray-400'>{t}</span>
-                                                 ))}
-                                                 {p.href? 
-                                                 <>
-                                                    <div className='flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 '>
-                                                        <a target="_blank" rel="noopener noreferrer" href={p.href} className="mt-5 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 px-4 py-2">See Product Page <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
-                                                    </div> 
-                                                </>: <></>}
-                                             </p>
-                                         </div>
-                                     </div>
-                                 </div>
-                             ))}
-                         </div>
-                     </article>
-
-                     {/* Blog */}
-                     <div id="blog" className="mt-20">
-                         <div className="flex items-center justify-between ">
-                             <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14">Blog</h2>
-                         </div>
-
-                         <div className="mt-6 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                             {posts.map((post) => (
-                                
-                                 <Link
-                                     to={`/blog/${post.id}`}
-                                     key={post.id}
-                                     className="m-5 md:m-0 p-4 border hover:shadow-sm bg-card rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:shadow-lg ">
-                                     <div className="css-1gc241n image-container svelte-5h8on2 border-and-scale with-aspect-ratio square"><img sizes="100vw" className="svelte-5h8on2 with-aspect-ratio" src="https://cdn.sanity.io/images/8m3angk4/production/0e835848ce8d140418c31a7123ba615af9b73312-1980x800.png?w=420&amp;auto=format" alt=""></img></div>
-                                     <div className="text-sm text-gray-500">{post.date}</div>
-                                     <h2 className="mt-5 text-[2.5rem]/none font-medium tracking-tight text-pretty hover:text-blue-700 ">{post.title}</h2>
-                                     <p className="mt-6 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400">{post.excerpt}</p>
-                                     <div className='flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 '>
-                                        <a href="#" className="mt-5 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950   px-4 py-2">Read more <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
-                                     </div>
-                                 </Link>
-                             ))}
-                         </div>
-                     </div>
-
-                      {/* Testimonials */}
-                    <section id="testimonials" className="mt-20">
-                        <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14">Client Testimonials</h2>
-                        <div className="relative overflow-hidden">
-                            <motion.div
-                             key={index}
-                             initial={{ x: 100, opacity: 0 }}
-                             animate={{ x: 0, opacity: 1 }}
-                             exit={{ x: -100, opacity: 0 }}
-                             transition={{ duration: 0.8 }}
-                             className='grid md:grid-cols-3 gap-6 mt-6' >
-
-                             {groupedTestimonials[index].map((t, i) => (
-                                <figure key={i} className="ring ring-gray-950/5  group row-span-2 grid max-lg:mx-auto max-lg:max-w-3xl max-lg:gap-y-5 lg:grid-rows-subgrid  transition">
-                                    <blockquote className='mx-auto flex items-center py-2 text-sm/7 tracking-tight max-lg:line-y lg:group-first:line-y px-8 text-xl/9 sm:px-16 sm:text-2xl/10'>
-                                        <p className="relative before:pointer-events-none before:absolute before:top-4 before:-left-6 before:text-[6rem] before:text-gray-950/10 before:content-['“'] sm:before:-left-8 lg:before:text-[8rem] dark:before:text-white/10">
-                                            {t.feedback}
-                                        </p>
-                                    </blockquote>
-                                    <figcaption className="grid grid-rows-[max-content_1fr] gap-3 py-2 px-8 sm:px-16">
-                                        <div className="mt-6 font-medium">{t.name}</div>
-                                        <div className="text-gray-600 dark:text-gray-400">{t.title}</div>
-                                    </figcaption>
-                                </figure>
-                             ))}
-                            </motion.div>
-
-                            {/*  Arrows */}
-                            <button
-                                onClick={prev}
-                                className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
-                                <ChevronLeft className='w-5 h-5 text-indigo-600' />
-                            </button>
-                            <button
-                                onClick={next}
-                                className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
-                            >
-                                <ChevronRight className='w-5 h-5 text-indigo-600' />
-                            </button>
-                        </div>
-                    </section>
-
-                    <section id="aboutme" className='line-y mt-30 grid grid-cols-1 gap-10 lg:grid-cols-2'>
-                        <div className='lg:border-r lg:border-gray-950/5 dark:lg:border-white/5'>
-                             <div className='grid grid-cols-1 gap-y-2 px-4 py-2 max-lg:line-b sm:px-2 lg:line-b/half'>
-                                <h2 className='font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-fuchsia-500 dark:text-fuchsia-400'>Q&A Section</h2>
-                                <p className='text-[2.5rem]/none font-medium tracking-tight text-pretty'>About me.</p>
-                             </div>
-                        </div>
-                        <div className='lg:border-l lg:border-gray-950/5 dark:lg:border-white/5'>
-                             <div className='grid grid-cols-1 gap-10'>
-                                <div className='group'>
-                                    <h3 className='px-4 py-2 sm:px-2 font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 dark:text-gray-500' >General</h3>
-                                    <dl>
-                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
-                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
-                                                <div className="text-left text-sm/7 font-semibold text-pretty">How did you build this site?</div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
-                                            </summary>
-                                            <div className="prose mt-4">
-                                                <p>I've gotten asked a few times how I went about building the site. The stack I used: Typescript, TailwindCSS, Supabase, Netlify, Umami, and combined with some artwork I made during my spare time.</p>
-                                            </div>
-                                        </details>
-
-                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
-                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
-                                                <div className="text-left text-sm/7 font-semibold text-pretty">Why did you choose to work in IT?</div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
-                                            </summary>
-                                            <div className="prose mt-4">
-                                                <p>It has been over 5 years previously held the role of Data Engineer, and software developer. My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then. </p>
-                                            </div>
-                                        </details>
-
-                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
-                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
-                                                <div className="text-left text-sm/7 font-semibold text-pretty">How were clients' comments about your services?</div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
-                                            </summary>
-                                            <div className="prose mt-4">
-                                                <p>I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field.</p>
-                                            </div>
-                                        </details>
-
-                                        <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
-                                            <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
-                                                <div className="text-left text-sm/7 font-semibold text-pretty">What kind of work will I do?</div>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
-                                            </summary>
-                                            <div className="prose mt-4">
-                                                <p>I am available for hire, contract and permanent employment. I can help with website develoment, web app development, backend integration, e-commerce websites, LLM Backend complex, active design, new prototypes and creative experiments where more freedom will be to explore, test, and ship alongside experienced builders across organization. Feel free to reach out at <a href="mailto:michellehlcn.aut@gmail.com">michellehlcn.au@gmail.com</a>.</p>
-                                            </div>
-                                        </details>
-                                    </dl>
-                                </div>
-                             </div>
-                        </div>
-
-                    </section>
-
-
-                </section>
             </div>
-        </div>
-    </div>
-</div>
-</main>
+                                     
+            <div className='mt-12'>
+                <div className='grid flex-1 grid-rows-[1fr_auto] overflow-clip grid-cols-[1fr_var(--gutter-width)_minmax(0,var(--breakpoint-2xl))_var(--gutter-width)_1fr] [--gutter-width:--spacing(6)] lg:[--gutter-width:--spacing(10)]'>
+                    {/* // Left space */}
+                    <div className="col-start-2 row-span-full row-start-1 max-sm:hidden  bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--grid-line-color)_0,var(--grid-line-color)_1px,transparent_0,transparent_50%)]"></div>
+                    {/* Right space */}
+                    <div className="col-start-4 row-span-full row-start-1 max-sm:hidden  bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--grid-line-color)_0,var(--grid-line-color)_1px,transparent_0,transparent_50%)]"></div>
+                    {/* Middle content */}
+                    <div className='col-start-3 row-start-1 max-sm:col-span-full max-sm:col-start-1'>
+                    
+                        <div className=' mx-auto'>
+                            {/* Right column: Blog + CV details + Projects + Expertise */}
+                            <section className='space-y-8'>            
+                                {/* Projects List*/}
+                                <article id="projects" className=''>
+                                    <div className='flex items-center justify-between'>
+                                        <h2 className='max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14'>Projects</h2>
+                                        {/* <a href="#" className='tetx-sm text-indigo-600'>See all projects</a> */}
+                                    </div>
+
+                                    <div className='mt-6 grid md:grid-cols-3 gap-6'>
+                                        {projects.map((p) => (
+                                            <div key={p.id} className='rounded-md overflow-hidden border m-5 md:m-0'>
+                                                <div className='md:flex flex-col p-6'>
+                                                    <img src={p.image} alt={p.title} className='h-40 w-full object-cover'></img>
+                                                    <div className='flex-1 mt-6'>
+                                                        <h2 className='text-[2.5rem]/none font-medium tracking-tight text-pretty hover:text-blue-700 '><a target="_blank" rel="noopener noreferrer" href={p.href}>{p.title}</a></h2>
+                                                        <p className='mt-2 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>{p.short}</p>
+                                                        <p className='mt-3 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400'>{p.description}</p>
+                                                        <p className='mt-4 flex flex-wrap gap-2'>
+                                                            {p.tags?.map((t) => (
+                                                                <span key={t} className='gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold ring-1 text-gray-950 ring-gray-950/10 hover:ring-gray-950/20 dark:text-white dark:ring-white/10 dark:hover:ring-white/20 px-4 py-2 mt-4 font-mono text-xs/6 tracking-wide text-gray-600 dark:text-gray-400'>{t}</span>
+                                                            ))}
+                                                            {p.href? 
+                                                            <>
+                                                                <div className='flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 '>
+                                                                    <a target="_blank" rel="noopener noreferrer" href={p.href} className="mt-5 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950 px-4 py-2">See Product Page <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
+                                                                </div> 
+                                                            </>: <></>}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </article>
+
+                                {/* Blog */}
+                                <div id="blog" className="mt-20">
+                                    <div className="flex items-center justify-between ">
+                                        <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14">Blog</h2>
+                                    </div>
+
+                                    <div className="mt-6 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                                        {posts.map((post) => (
+                                            
+                                            <Link
+                                                to={`/blog/${post.id}`}
+                                                key={post.id}
+                                                className="m-5 md:m-0 p-4 border hover:shadow-sm bg-card rounded-xl overflow-hidden transition-all duration-200 flex flex-col hover:shadow-lg ">
+                                                <div className="css-1gc241n image-container svelte-5h8on2 border-and-scale with-aspect-ratio square"><img sizes="100vw" className="svelte-5h8on2 with-aspect-ratio" src="https://cdn.sanity.io/images/8m3angk4/production/0e835848ce8d140418c31a7123ba615af9b73312-1980x800.png?w=420&amp;auto=format" alt=""></img></div>
+                                                <div className="text-sm text-gray-500">{post.date}</div>
+                                                <h2 className="mt-5 text-[2.5rem]/none font-medium tracking-tight text-pretty hover:text-blue-700 ">{post.title}</h2>
+                                                <p className="mt-6 mt-4 max-w-2xl text-base/7 text-gray-600 dark:text-gray-400">{post.excerpt}</p>
+                                                <div className='flex gap-4 px-4 py-2 whitespace-nowrap max-lg:line-t max-lg:mt-6 sm:px-2 '>
+                                                    <a href="#" className="mt-5 gap-2 inline-flex justify-center rounded-full text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-950   px-4 py-2">Read more <svg fill="currentColor" aria-hidden="true" viewBox="0 0 10 10" className="-mr-0.5 w-2.5"><path d="M4.85355 0.146423L9.70711 4.99998L4.85355 9.85353L4.14645 9.14642L7.79289 5.49998H0V4.49998H7.79289L4.14645 0.85353L4.85355 0.146423Z"></path></svg></a>
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Testimonials */}
+                                <section id="testimonials" className="mt-20">
+                                    <h2 className="max-w-3xl text-3xl font-medium tracking-tight text-pretty md:text-[2.5rem]/14">Client Testimonials</h2>
+                                    <div className="relative overflow-hidden">
+                                        <motion.div
+                                        key={index}
+                                        initial={{ x: 100, opacity: 0 }}
+                                        animate={{ x: 0, opacity: 1 }}
+                                        exit={{ x: -100, opacity: 0 }}
+                                        transition={{ duration: 0.8 }}
+                                        className='grid md:grid-cols-3 gap-6 mt-6' >
+
+                                        {groupedTestimonials[index].map((t, i) => (
+                                            <figure key={i} className="ring ring-gray-950/5  group row-span-2 grid max-lg:mx-auto max-lg:max-w-3xl max-lg:gap-y-5 lg:grid-rows-subgrid  transition">
+                                                <blockquote className='mx-auto flex items-center py-2 text-sm/7 tracking-tight max-lg:line-y lg:group-first:line-y px-8 text-xl/9 sm:px-16 sm:text-2xl/10'>
+                                                    <p className="relative before:pointer-events-none before:absolute before:top-4 before:-left-6 before:text-[6rem] before:text-gray-950/10 before:content-['“'] sm:before:-left-8 lg:before:text-[8rem] dark:before:text-white/10">
+                                                        {t.feedback}
+                                                    </p>
+                                                </blockquote>
+                                                <figcaption className="grid grid-rows-[max-content_1fr] gap-3 py-2 px-8 sm:px-16">
+                                                    <div className="mt-6 font-medium">{t.name}</div>
+                                                    <div className="text-gray-600 dark:text-gray-400">{t.title}</div>
+                                                </figcaption>
+                                            </figure>
+                                        ))}
+                                        </motion.div>
+
+                                        {/*  Arrows */}
+                                        <button
+                                            onClick={prev}
+                                            className='absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'>
+                                            <ChevronLeft className='w-5 h-5 text-indigo-600' />
+                                        </button>
+                                        <button
+                                            onClick={next}
+                                            className='absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-indigo-50'
+                                        >
+                                            <ChevronRight className='w-5 h-5 text-indigo-600' />
+                                        </button>
+                                    </div>
+                                </section>
+
+                                <section id="aboutme" className='line-y mt-30 grid grid-cols-1 gap-10 lg:grid-cols-2'>
+                                    <div className='lg:border-r lg:border-gray-950/5 dark:lg:border-white/5'>
+                                        <div className='grid grid-cols-1 gap-y-2 px-4 py-2 max-lg:line-b sm:px-2 lg:line-b/half'>
+                                            <h2 className='font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-fuchsia-500 dark:text-fuchsia-400'>Q&A Section</h2>
+                                            <p className='text-[2.5rem]/none font-medium tracking-tight text-pretty'>About me.</p>
+                                        </div>
+                                    </div>
+                                    <div className='lg:border-l lg:border-gray-950/5 dark:lg:border-white/5'>
+                                        <div className='grid grid-cols-1 gap-10'>
+                                            <div className='group'>
+                                                <h3 className='px-4 py-2 sm:px-2 font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-gray-600 dark:text-gray-500' >General</h3>
+                                                <dl>
+                                                    <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                                        <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                            <div className="text-left text-sm/7 font-semibold text-pretty">How did you build this site?</div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                                        </summary>
+                                                        <div className="prose mt-4">
+                                                            <p>I've gotten asked a few times how I went about building the site. The stack I used: Typescript, TailwindCSS, Supabase, Netlify, Umami, and combined with some artwork I made during my spare time.</p>
+                                                        </div>
+                                                    </details>
+
+                                                    <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                                        <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                            <div className="text-left text-sm/7 font-semibold text-pretty">Why did you choose to work in IT?</div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                                        </summary>
+                                                        <div className="prose mt-4">
+                                                            <p>It has been over 5 years previously held the role of Data Engineer, and software developer. My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then. </p>
+                                                        </div>
+                                                    </details>
+
+                                                    <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                                        <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                            <div className="text-left text-sm/7 font-semibold text-pretty">How were clients' comments about your services?</div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                                        </summary>
+                                                        <div className="prose mt-4">
+                                                            <p>I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field.</p>
+                                                        </div>
+                                                    </details>
+
+                                                    <details className="group border-t border-gray-950/5 px-4 py-3 sm:px-2 dark:border-white/5">
+                                                        <summary id="" className="flex w-full cursor-pointer justify-between gap-4 select-none group-open:text-fuchsia-500 [&amp;::-webkit-details-marker]:hidden">
+                                                            <div className="text-left text-sm/7 font-semibold text-pretty">What kind of work will I do?</div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 group-open:hidden"><path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path></svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-7 w-4 not-group-open:hidden"><path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z"></path></svg>
+                                                        </summary>
+                                                        <div className="prose mt-4">
+                                                            <p>I am available for hire, contract and permanent employment. I can help with website develoment, web app development, backend integration, e-commerce websites, LLM Backend complex, active design, new prototypes and creative experiments where more freedom will be to explore, test, and ship alongside experienced builders across organization. Feel free to reach out at <a href="mailto:michellehlcn.aut@gmail.com">michellehlcn.au@gmail.com</a>.</p>
+                                                        </div>
+                                                    </details>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
 
     )
 }
