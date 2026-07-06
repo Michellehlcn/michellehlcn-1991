@@ -335,7 +335,7 @@ export default function PortfolioLanding() {
                                     </div>
                                 </section>
 
-                                <section id="aboutme" className='line-y mt-30 grid grid-cols-1 gap-10 lg:grid-cols-2'>
+                                <section id="aboutme" className='line-y mt-30 grid grid-cols-1 gap-10 lg:grid-cols-2 p-12'>
                                     <div className='lg:border-r lg:border-gray-950/5 dark:lg:border-white/5'>
                                         <div className='grid grid-cols-1 gap-y-2 px-4 py-2 max-lg:line-b sm:px-2 lg:line-b/half'>
                                             <h2 className='font-mono text-[0.8125rem]/6 font-medium tracking-widest text-pretty uppercase text-fuchsia-500 dark:text-fuchsia-400'>Q&A Section</h2>
@@ -396,6 +396,7 @@ export default function PortfolioLanding() {
                                     </div>
 
                                 </section>
+                                
                             </section>
                         </div>
                     </div>
